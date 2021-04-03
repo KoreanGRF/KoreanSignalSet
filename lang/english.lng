@@ -1,0 +1,13 @@
+##grflangid 0x00
+
+# GRF name and description
+STR_GRF_NAME_WITH_VER                            :Korean Signals Set {VERSION}
+STR_GRF_DESC                                     :A signals set for Korean signals.{}(Updated: {RECENT_UPDATED}){}{SILVER}+ Author: TELK, EightOnEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
+STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignals
+
+
+# Parameters
+STR_PARAM_IS_REALISTIC_NAME                      :Realistic graphic
+STR_PARAM_IS_REALISTIC_DESC                      :If enabled, use real life graphic instead of game optimized one.
+STR_PARAM_USE_BLUE_AS_OPEN_NAME                  :Use blue signal
+STR_PARAM_USE_BLUE_AS_OPEN_DESC                  :If enabled, use blue signal instead of green.

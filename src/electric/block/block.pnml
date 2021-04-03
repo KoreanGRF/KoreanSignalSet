@@ -1,0 +1,87 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signals Set)
+ * https://github.com/KoreanGRF/KoreanSignals
+------------------------------------------------------------------------------*/
+/**
+ * Block signal
+ */
+ 
+// ↗, red
+replace (1275, "./src/electric/block/block.png") {
+	electric_signal_NE(0, 0)
+}
+
+// ↗, green
+replace (1276, "./src/electric/block/block.png") {
+	electric_signal_NE(0, 120)
+}
+
+// ↙, red
+replace (1277, "./src/electric/block/block.png") {
+	electric_signal_SW(0, 0)
+}
+
+// ↙, green
+replace (1278, "./src/electric/block/block.png") {
+	electric_signal_SW(0, 120)
+}
+
+// ↘, red
+replace (1279, "./src/electric/block/block.png") {
+	electric_signal_SE(0, 0)
+}
+
+// ↘, green
+replace (1280, "./src/electric/block/block.png") {
+	electric_signal_SE(0, 120)
+}
+
+// ↖, red
+replace (1281, "./src/electric/block/block.png") {
+	electric_signal_NW(0, 0)
+}
+
+// ↖, green
+replace (1282, "./src/electric/block/block.png") {
+	electric_signal_NW(0, 120)
+}
+
+// ←, red
+replace (1283, "./src/electric/block/block.png") {
+	electric_signal_W(0, 0)
+}
+
+// ←, green
+replace (1284, "./src/electric/block/block.png") {
+	electric_signal_W(0, 120)
+}
+
+// →, red
+replace (1285, "./src/electric/block/block.png") {
+	electric_signal_E(0, 0)
+}
+
+// →, green
+replace (1286, "./src/electric/block/block.png") {
+	electric_signal_E(0, 120)
+}
+
+// ↑, red
+replace (1287, "./src/electric/block/block.png") {
+	electric_signal_N(0, 0)
+}
+
+// ↑, green
+replace (1288, "./src/electric/block/block.png") {
+	electric_signal_N(0, 120)
+}
+
+// ↓, red
+replace (1289, "./src/electric/block/block.png") {
+	electric_signal_S(0, 0)
+}
+
+// ↓, green
+replace (1290, "./src/electric/block/block.png") {
+	electric_signal_S(0, 120)
+}

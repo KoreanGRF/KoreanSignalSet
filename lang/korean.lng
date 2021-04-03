@@ -1,0 +1,13 @@
+##grflangid 0x3A
+
+# GRF name and description
+STR_GRF_NAME_WITH_VER                            :한국 신호기 세트 {VERSION}
+STR_GRF_DESC                                     :한국식 신호기를 추가해주는 신호기 세트입니다.{}(업데이트: {RECENT_UPDATED}){}{SILVER}+ 제작: TELK, EightOnEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
+STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignals
+
+
+# Parameters
+STR_PARAM_IS_REALISTIC_NAME                      :현실적 그래픽
+STR_PARAM_IS_REALISTIC_DESC                      :이 설정을 켜면, 신호기를 게임에 적합한 모습 대신 현실 세계의 모습으로 표현합니다.
+STR_PARAM_USE_BLUE_AS_OPEN_NAME                  :파란 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_DESC                  :이 설정을 켜면, 녹색 신호 대신 파란 신호를 사용합니다.

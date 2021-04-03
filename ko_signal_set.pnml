@@ -1,0 +1,601 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signals Set)
+ * https://github.com/KoreanGRF/KoreanSignals
+------------------------------------------------------------------------------*/
+
+// Basic information of NewGRF
+grf {
+	grfid :                            "TK\06\03";
+	name :                             string(STR_GRF_NAME_WITH_VER);
+	desc :                             string(STR_GRF_DESC);
+	url :                              string(STR_GRF_URL);
+	version :                          1;
+	min_compatible_version :           1;
+	
+    param 1 {
+		// is Realistic
+        is_realistic {
+            type: bool;
+            name: string(STR_PARAM_IS_REALISTIC_NAME);
+            desc: string(STR_PARAM_IS_REALISTIC_DESC);
+            bit: 1;
+            def_value: 1;
+        }
+		
+		// Use blue as open signal
+        is_blue {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_DESC);
+            bit: 1;
+            def_value: 1;
+        }
+    }
+}
+
+
+template electric_signal_diagonal(x, y, xoff, yoff) {
+    [x,    y,   6,   26,   xoff,   yoff]
+}
+template electric_signal_NE(x, y) {
+	electric_signal_diagonal(x, y, -3, -24)
+}
+template electric_signal_SW(x, y) {
+	electric_signal_diagonal(x+15, y, -1, -24)
+}
+template electric_signal_SE(x, y) {
+	electric_signal_diagonal(x+30, y, -3, -24)
+}
+template electric_signal_NW(x, y) {
+	electric_signal_diagonal(x+45, y, -1, -23)
+}
+template electric_signal_W(x, y) {
+    [x+60,   y,   7,   26,   -1,   -24]
+}
+template electric_signal_E(x, y) {
+    [x+75,   y,   7,   26,   -4,   -24]
+}
+template electric_signal_N(x, y) {
+    [x+90,   y,   4,   26,   -1,   -24]
+}
+template electric_signal_S(x, y) {
+    [x+105,  y,   4,   26,   -1,   -24]
+}
+
+// Block, electric
+#include "src/electric/block/block.pnml"
+
+// // ↗↙↖↘
+// // Signal build button
+// replace rail_overlays(1291, "") {
+// }
+// // Mouse cursors
+// replace rail_overlays(1292, "") {
+// }
+// replace rail_overlays(1293, "") {
+// }
+// // Signal change button
+// replace rail_overlays(5031, "") {
+// }
+
+
+
+
+
+// /**
+//  * Entry signal
+//  */
+// // ↗, red
+// replace rail_overlays(5082, "") {
+// }
+
+// // ↗, green
+// replace rail_overlays(5083, "") {
+// }
+
+// // ↙, red
+// replace rail_overlays(5084, "") {
+// }
+
+// // ↙, green
+// replace rail_overlays(5085, "") {
+// }
+
+// // ↘, red
+// replace rail_overlays(5086, "") {
+// }
+
+// // ↘, green
+// replace rail_overlays(5087, "") {
+// }
+
+// // ↖, red
+// replace rail_overlays(5088, "") {
+// }
+
+// // ↖, green
+// replace rail_overlays(5089, "") {
+// }
+
+// // ←, red
+// replace rail_overlays(5090, "") {
+// }
+
+// // ←, green
+// replace rail_overlays(5091, "") {
+// }
+
+// // →, red
+// replace rail_overlays(5092, "") {
+// }
+
+// // →, green
+// replace rail_overlays(5093, "") {
+// }
+
+// // ↑, red
+// replace rail_overlays(5094, "") {
+// }
+
+// // ↑, green
+// replace rail_overlays(5095, "") {
+// }
+
+// // ↓, red
+// replace rail_overlays(5096, "") {
+// }
+
+// // ↓, green
+// replace rail_overlays(5097, "") {
+// }
+
+
+
+// /**
+//  * Exit signal
+//  */
+// // ↗, red
+// replace rail_overlays(5098, "") {
+// }
+
+// // ↗, green
+// replace rail_overlays(5099, "") {
+// }
+
+// // ↙, red
+// replace rail_overlays(5100, "") {
+// }
+
+// // ↙, green
+// replace rail_overlays(5101, "") {
+// }
+
+// // ↘, red
+// replace rail_overlays(5102, "") {
+// }
+
+// // ↘, green
+// replace rail_overlays(5103, "") {
+// }
+
+// // ↖, red
+// replace rail_overlays(5104, "") {
+// }
+
+// // ↖, green
+// replace rail_overlays(5105, "") {
+// }
+
+// // ←, red
+// replace rail_overlays(5106, "") {
+// }
+
+// // ←, green
+// replace rail_overlays(5107, "") {
+// }
+
+// // →, red
+// replace rail_overlays(5108, "") {
+// }
+
+// // →, green
+// replace rail_overlays(5109, "") {
+// }
+
+// // ↑, red
+// replace rail_overlays(5110, "") {
+// }
+
+// // ↑, green
+// replace rail_overlays(5111, "") {
+// }
+
+// // ↓, red
+// replace rail_overlays(5112, "") {
+// }
+
+// // ↓, green
+// replace rail_overlays(5113, "") {
+// }
+
+
+
+// /**
+//  * Combo signal
+//  */
+// // ↗, red
+// replace rail_overlays(5114, "") {
+// }
+
+// // ↗, green
+// replace rail_overlays(5115, "") {
+// }
+
+// // ↙, red
+// replace rail_overlays(5116, "") {
+// }
+
+// // ↙, green
+// replace rail_overlays(5117, "") {
+// }
+
+// // ↘, red
+// replace rail_overlays(5118, "") {
+// }
+
+// // ↘, green
+// replace rail_overlays(5119, "") {
+// }
+
+// // ↖, red
+// replace rail_overlays(5120, "") {
+// }
+
+// // ↖, green
+// replace rail_overlays(5121, "") {
+// }
+
+// // ←, red
+// replace rail_overlays(5122, "") {
+// }
+
+// // ←, green
+// replace rail_overlays(5123, "") {
+// }
+
+// // →, red
+// replace rail_overlays(5124, "") {
+// }
+
+// // →, green
+// replace rail_overlays(5125, "") {
+// }
+
+// // ↑, red
+// replace rail_overlays(5126, "") {
+// }
+
+// // ↑, green
+// replace rail_overlays(5127, "") {
+// }
+
+// // ↓, red
+// replace rail_overlays(5128, "") {
+// }
+
+// // ↓, green
+// replace rail_overlays(5129, "") {
+// }
+
+
+
+// /**
+//  * Block signal (semaphore)
+//  */
+// // ↗, red
+// replace rail_overlays(5130, "") {
+// }
+
+// // ↗, green
+// replace rail_overlays(5131, "") {
+// }
+
+// // ↙, red
+// replace rail_overlays(5132, "") {
+// }
+
+// // ↙, green
+// replace rail_overlays(5133, "") {
+// }
+
+// // ↘, red
+// replace rail_overlays(5134, "") {
+// }
+
+// // ↘, green
+// replace rail_overlays(5135, "") {
+// }
+
+// // ↖, red
+// replace rail_overlays(5136, "") {
+// }
+
+// // ↖, green
+// replace rail_overlays(5137, "") {
+// }
+
+// // ←, red
+// replace rail_overlays(5138, "") {
+// }
+
+// // ←, green
+// replace rail_overlays(5139, "") {
+// }
+
+// // →, red
+// replace rail_overlays(5140, "") {
+// }
+
+// // →, green
+// replace rail_overlays(5141, "") {
+// }
+
+// // ↑, red
+// replace rail_overlays(5142, "") {
+// }
+
+// // ↑, green
+// replace rail_overlays(5143, "") {
+// }
+
+// // ↓, red
+// replace rail_overlays(5144, "") {
+// }
+
+// // ↓, green
+// replace rail_overlays(5145, "") {
+// }
+
+
+
+// /**
+//  * Entry signal (semaphore)
+//  */
+// // ↗, red
+// replace rail_overlays(5146, "") {
+// }
+
+// // ↗, green
+// replace rail_overlays(5147, "") {
+// }
+
+// // ↙, red
+// replace rail_overlays(5148, "") {
+// }
+
+// // ↙, green
+// replace rail_overlays(5149, "") {
+// }
+
+// // ↘, red
+// replace rail_overlays(5150, "") {
+// }
+
+// // ↘, green
+// replace rail_overlays(5151, "") {
+// }
+
+// // ↖, red
+// replace rail_overlays(5152, "") {
+// }
+
+// // ↖, green
+// replace rail_overlays(5153, "") {
+// }
+
+// // ←, red
+// replace rail_overlays(5154, "") {
+// }
+
+// // ←, green
+// replace rail_overlays(5155, "") {
+// }
+
+// // →, red
+// replace rail_overlays(5156, "") {
+// }
+
+// // →, green
+// replace rail_overlays(5157, "") {
+// }
+
+// // ↑, red
+// replace rail_overlays(5158, "") {
+// }
+
+// // ↑, green
+// replace rail_overlays(5159, "") {
+// }
+
+// // ↓, red
+// replace rail_overlays(5160, "") {
+// }
+
+// // ↓, green
+// replace rail_overlays(5161, "") {
+// }
+
+// /**
+//  * Exit signal, semaphore (5162-5177)
+//  */
+
+
+// /**
+//  * Combo signal, semaphore (5178-5193)
+//  */
+
+
+// /**
+//  * Path signal (5194-5210)
+//  */
+
+
+// /**
+//  * One-way Path signal (5210-5225)
+//  */
+// // ↗, red
+// replace rail_overlays(5210, "") {
+// }
+
+// // ↗, green
+// replace rail_overlays(5211, "") {
+// }
+
+// // ↙, red
+// replace rail_overlays(5212, "") {
+// }
+
+// // ↙, green
+// replace rail_overlays(5213, "") {
+// }
+
+// // ↘, red
+// replace rail_overlays(5214, "") {
+// }
+
+// // ↘, green
+// replace rail_overlays(5215, "") {
+// }
+
+// // ↖, red
+// replace rail_overlays(5216, "") {
+// }
+
+// // ↖, green
+// replace rail_overlays(5217, "") {
+// }
+
+// // ←, red
+// replace rail_overlays(5218, "") {
+// }
+
+// // ←, green
+// replace rail_overlays(5219, "") {
+// }
+
+// // →, red
+// replace rail_overlays(5220, "") {
+// }
+
+// // →, green
+// replace rail_overlays(5221, "") {
+// }
+
+// // ↑, red
+// replace rail_overlays(5222, "") {
+// }
+
+// // ↑, green
+// replace rail_overlays(5223, "") {
+// }
+
+// // ↓, red
+// replace rail_overlays(5224, "") {
+// }
+
+// // ↓, green
+// replace rail_overlays(5225, "") {
+// }
+
+
+// /**
+//  * 미사용 (5226-5237)
+//  */
+// // ↗, red
+// replace rail_overlays(5226, "") {
+// }
+
+// // ↗, green
+// replace rail_overlays(5227, "") {
+// }
+
+// // ↙, red
+// replace rail_overlays(5228, "") {
+// }
+
+// // ↙, green
+// replace rail_overlays(5229, "") {
+// }
+
+// // ↘, red
+// replace rail_overlays(5230, "") {
+// }
+
+// // ↘, green
+// replace rail_overlays(5231, "") {
+// }
+
+// // ↖, red
+// replace rail_overlays(5232, "") {
+// }
+
+// // ↖, green
+// replace rail_overlays(5233, "") {
+// }
+
+// // ←, red
+// replace rail_overlays(5234, "") {
+// }
+
+// // ←, green
+// replace rail_overlays(5235, "") {
+// }
+
+// // →, red
+// replace rail_overlays(5236, "") {
+// }
+
+// // →, green
+// replace rail_overlays(5237, "") {
+// }
+
+// // ↑, red
+// replace rail_overlays(5238, "") {
+// }
+
+// // ↑, green
+// replace rail_overlays(5239, "") {
+// }
+
+// // ↓, red
+// replace rail_overlays(5240, "") {
+// }
+
+// // ↓, green
+// replace rail_overlays(5241, "") {
+// }
+
+
+
+// /**
+//  * 미사용 (5242-5257)
+//  */
+
+// /**
+//  * Path signal, semaphore (5258-5273)
+//  */
+
+
+// /**
+//  * One-way Path signal, semaphore (5274-5289)
+//  */
+
+
+// /**
+//  * Exit signal (with something?), semaphore (5290-5305) compare with 5162
+//  */
+
+
+// /**
+//  * Combo signal (with something?), semaphore (5306-5321)
+//  */
