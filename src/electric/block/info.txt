@@ -1,0 +1,7 @@
+dummy:
+  * YB.real
+  * YG.real
+  * YB.nonreal
+  * YG.nonreal
+
+*.real.png 와 *.nonreal.png 는 같은 그래픽
