@@ -5,14 +5,14 @@
 /**
  * Block signal
  */
- 
+
 // ↗, red
 replace (1275, "./src/electric/block/block.png") {
     electric_signal_NE(0, 0)
 }
 
 // ↗, green
-if(is_blue) {
+if(use_blue) {
     replace (1276, "./src/electric/block/block.png") {
         electric_signal_NE(0, 150)
     }
@@ -28,7 +28,7 @@ replace (1277, "./src/electric/block/block.png") {
 }
 
 // ↙, green
-if(is_blue) {
+if(use_blue) {
     replace (1278, "./src/electric/block/block.png") {
         electric_signal_SW(0, 150)
     }
@@ -44,7 +44,7 @@ replace (1279, "./src/electric/block/block.png") {
 }
 
 // ↘, green
-if(is_blue) {
+if(use_blue) {
     replace (1280, "./src/electric/block/block.png") {
         electric_signal_SE(0, 150)
     }
@@ -60,7 +60,7 @@ replace (1281, "./src/electric/block/block.png") {
 }
 
 // ↖, green
-if(is_blue) {
+if(use_blue) {
     replace (1282, "./src/electric/block/block.png") {
         electric_signal_NW(0, 150)
     }
@@ -76,7 +76,7 @@ replace (1283, "./src/electric/block/block.png") {
 }
 
 // ←, green
-if(is_blue) {
+if(use_blue) {
     replace (1284, "./src/electric/block/block.png") {
         electric_signal_W(0, 150)
     }
@@ -92,7 +92,7 @@ replace (1285, "./src/electric/block/block.png") {
 }
 
 // →, green
-if(is_blue) {
+if(use_blue) {
     replace (1286, "./src/electric/block/block.png") {
         electric_signal_E(0, 150)
     }
@@ -108,7 +108,7 @@ replace (1287, "./src/electric/block/block.png") {
 }
 
 // ↑, green
-if(is_blue) {
+if(use_blue) {
     replace (1288, "./src/electric/block/block.png") {
         electric_signal_N(0, 150)
     }
@@ -124,7 +124,7 @@ replace (1289, "./src/electric/block/block.png") {
 }
 
 // ↓, green
-if(is_blue) {
+if(use_blue) {
     replace (1290, "./src/electric/block/block.png") {
         electric_signal_S(0, 150)
     }

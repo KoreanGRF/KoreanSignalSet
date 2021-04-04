@@ -5,15 +5,15 @@
 
 // Basic information of NewGRF
 grf {
-	grfid :                            "TK\06\03";
-	name :                             string(STR_GRF_NAME_WITH_VER);
-	desc :                             string(STR_GRF_DESC);
-	url :                              string(STR_GRF_URL);
-	version :                          1;
-	min_compatible_version :           1;
-	
+    grfid :                            "TK\06\03";
+    name :                             string(STR_GRF_NAME_WITH_VER);
+    desc :                             string(STR_GRF_DESC);
+    url :                              string(STR_GRF_URL);
+    version :                          1;
+    min_compatible_version :           1;
+    
     param 1 {
-		// is Realistic
+        // is Realistic
         is_realistic {
             type: bool;
             name: string(STR_PARAM_IS_REALISTIC_NAME);
@@ -21,17 +21,17 @@ grf {
             bit: 0;
             def_value: 1;
         }
-		
-		// Use blue as open signal
-        is_blue {
+        
+        // Use blue as open signal
+        use_blue {
             type: bool;
             name: string(STR_PARAM_USE_BLUE_AS_OPEN_NAME);
             desc: string(STR_PARAM_USE_BLUE_AS_OPEN_DESC);
             bit: 1;
             def_value: 0;
         }
-		
-		// Use TVM
+        
+        // Use TVM
         use_tvm {
             type: bool;
             name: string(STR_PARAM_USE_TVM_NAME);
@@ -39,8 +39,8 @@ grf {
             bit: 2;
             def_value: 1;
         }
-		
-		// Use caution signals(Y and YG) together
+        
+        // Use caution signals(Y and YG) together
         use_caution_signal {
             type: bool;
             name: string(STR_PARAM_USE_CAUTION_SIGNALS_NAME);
@@ -51,20 +51,21 @@ grf {
     }
 }
 
+// Templates
 template electric_signal_diagonal(x, y, xoff, yoff) {
     [x,    y,   6,   26,   xoff,   yoff]
 }
 template electric_signal_NE(x, y) {
-	electric_signal_diagonal(x, y, -3, -24)
+    electric_signal_diagonal(x, y, -3, -24)
 }
 template electric_signal_SW(x, y) {
-	electric_signal_diagonal(x+15, y, -1, -24)
+    electric_signal_diagonal(x+15, y, -1, -24)
 }
 template electric_signal_SE(x, y) {
-	electric_signal_diagonal(x+30, y, -3, -24)
+    electric_signal_diagonal(x+30, y, -3, -24)
 }
 template electric_signal_NW(x, y) {
-	electric_signal_diagonal(x+45, y, -1, -23)
+    electric_signal_diagonal(x+45, y, -1, -23)
 }
 template electric_signal_W(x, y) {
     [x+60,   y,   7,   26,   -1,   -24]
