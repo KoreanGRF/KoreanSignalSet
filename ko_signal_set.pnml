@@ -83,6 +83,9 @@ template electric_signal_S(x, y) {
 // Block, electric
 #include "src/electric/block/block.pnml"
 
+// Entrance, electric
+#include "src/electric/entrance/entrance.pnml"
+
 // // ↗↙↖↘
 // // Signal build button
 // replace rail_overlays(1291, "") {
