@@ -11,3 +11,7 @@ STR_PARAM_IS_REALISTIC_NAME                      :Realistic graphic
 STR_PARAM_IS_REALISTIC_DESC                      :If enabled, use real life graphic instead of game optimized one.
 STR_PARAM_USE_BLUE_AS_OPEN_NAME                  :Use blue signal
 STR_PARAM_USE_BLUE_AS_OPEN_DESC                  :If enabled, use blue signal instead of green.
+STR_PARAM_USE_TVM_NAME                           :Change semaphore block signal to TVM block sign
+STR_PARAM_USE_TVM_DESC                           :Change semaphore block signal to TVM block sign which is used for high speed rails, which is the same graphics for red and green state.
+STR_PARAM_USE_CAUTION_SIGNALS_NAME               :Use caution signals
+STR_PARAM_USE_CAUTION_SIGNALS_DESC               :Use caution signals(Yellow, Yellow+Green) for electric exit, combo signals.

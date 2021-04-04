@@ -18,7 +18,7 @@ grf {
             type: bool;
             name: string(STR_PARAM_IS_REALISTIC_NAME);
             desc: string(STR_PARAM_IS_REALISTIC_DESC);
-            bit: 1;
+            bit: 0;
             def_value: 1;
         }
 		
@@ -28,11 +28,28 @@ grf {
             name: string(STR_PARAM_USE_BLUE_AS_OPEN_NAME);
             desc: string(STR_PARAM_USE_BLUE_AS_OPEN_DESC);
             bit: 1;
+            def_value: 0;
+        }
+		
+		// Use TVM
+        use_tvm {
+            type: bool;
+            name: string(STR_PARAM_USE_TVM_NAME);
+            desc: string(STR_PARAM_USE_TVM_DESC);
+            bit: 2;
+            def_value: 1;
+        }
+		
+		// Use caution signals(Y and YG) together
+        use_caution_signal {
+            type: bool;
+            name: string(STR_PARAM_USE_CAUTION_SIGNALS_NAME);
+            desc: string(STR_PARAM_USE_CAUTION_SIGNALS_DESC);
+            bit: 3;
             def_value: 1;
         }
     }
 }
-
 
 template electric_signal_diagonal(x, y, xoff, yoff) {
     [x,    y,   6,   26,   xoff,   yoff]
