@@ -18,13 +18,13 @@ output = output + replace_electric_signal('entrance', 6278)   # Restricted signa
 
 # Electric, exit
 print("Electric, exit")
-output = output + replace_electric_signal('exit', 5098)
-output = output + replace_electric_signal('exit', 6294)   # Restricted signal (with blue pole)
+output = output + replace_electric_signal('exit', 5098, 'YG')
+output = output + replace_electric_signal('exit', 6294, 'YG')   # Restricted signal (with blue pole)
 
 # Electric, combo
 print("Electric, combo")
-output = output + replace_electric_signal('combo', 5114)
-output = output + replace_electric_signal('combo', 6310)   # Restricted signal (with blue pole)
+output = output + replace_electric_signal('combo', 5114, 'Y')
+output = output + replace_electric_signal('combo', 6310, 'Y')   # Restricted signal (with blue pole)
 
 # Electric, path
 print("Electric, path")

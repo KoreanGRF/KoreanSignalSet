@@ -8,10 +8,10 @@ STR_GRF_URL                                      :https://github.com/KoreanGRF/K
 
 # Parameters
 STR_PARAM_IS_REALISTIC_NAME                      :현실적 그래픽
-STR_PARAM_IS_REALISTIC_DESC                      :이 설정을 켜면, 신호기를 게임에 적합한 모습 대신 현실 세계의 모습으로 표현합니다.
+STR_PARAM_IS_REALISTIC_DESC                      :이 설정을 켜면, 신호기를 게임에 적합한 모습 대신 현실 세계의 모습으로 표현합니다. (기본값: 켬)
 STR_PARAM_USE_BLUE_AS_OPEN_NAME                  :파란 신호 사용
-STR_PARAM_USE_BLUE_AS_OPEN_DESC                  :이 설정을 켜면, 녹색 신호 대신 파란색 신호를 사용합니다.
+STR_PARAM_USE_BLUE_AS_OPEN_DESC                  :이 설정을 켜면, 녹색 신호 대신 파란색 신호를 사용합니다. (기본값: 끔)
 STR_PARAM_USE_TVM_NAME                           :구식 폐색 신호기를 TVM 폐색 표지로 변경
-STR_PARAM_USE_TVM_DESC                           :구식 폐색 신호기를 고속철도에서 사용하는 TVM 폐색 표지로 변경합니다. TVM 폐색 표지는 진행/정지 신호가 구분되지 않습니다.
+STR_PARAM_USE_TVM_DESC                           :구식 폐색 신호기를 고속철도에서 사용하는 TVM 폐색 표지로 변경합니다. TVM 폐색 표지는 진행/정지 신호가 구분되지 않습니다. (기본값: 켬)
 STR_PARAM_USE_CAUTION_SIGNALS_NAME               :주의 신호 사용
-STR_PARAM_USE_CAUTION_SIGNALS_DESC               :전자식 출구, 복합 신호기의 진행 신호를 주의(Y) 신호로 변경합니다.
+STR_PARAM_USE_CAUTION_SIGNALS_DESC               :전자식 출구, 복합 신호기의 진행 신호를 주의(Y) 신호로 변경합니다. (기본값: 켬)
