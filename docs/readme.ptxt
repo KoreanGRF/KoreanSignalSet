@@ -1,1 +1,54 @@
-한국 신호기 세트 {{VERSION}}
+====================================
+    한국 신호기 세트 {{VERSION}}
+    Korean Signal Set {{VERSION}}
+====================================
+
+List
+==========
+1. About
+2. Known-bugs
+3. Contact & Translation
+4. Credits
+5. Copyrights
+
+
+1. About
+==========
+  Korean Signal Set introduces signals and mark signs of South Korea.
+You can choose green or blue signal for open signal block state, TVM sign for high speed
+rail instead of semaphore block signal or combination of yellow with green(blue) signal
+graphic. (Note: it is just a eyecandy, not work for yellow signal)
+
+
+2. Known-bugs
+==========
+(None yet)
+
+3. Contact & Translation
+==========
++ If you have found a bug or you have a sugguestion, please make an issue at
+  our Github(http://github.com/KoreanGRF/KoreanSignalSet), visit coder's website
+  TELKLAND(http://telk.kr) or email to TELK(telk5093@gmail.com)
++ If you want to translate Korean Signal Set and the download page of Korean Signal Set
+  into your language, please visit the Github project(http://github.com/KoreanGRF/KoreanSignalSet)
+  and see "Translations".
++ Please ask to TELK(OpenTTD Korean translator) to get more information in English.
++ Links
+  * TELKLAND - http://telk.kr
+  * Official Download Page - http://telk.kr/ottd/newgrf/ko_signal_set/?lang=en
+  * Github - https://github.com/KoreanGRF/KoreanSignalSet
+
+
+5. Credits
+==========
+TELK (telk5093@gmail.com, http://telk.kr)
+  - NML Codes, graphic modifications
+EightonEight (fbud818@naver.com)
+  - Graphics
+
+
+6. Copyrights
+==========
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
+License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/ or
+send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
