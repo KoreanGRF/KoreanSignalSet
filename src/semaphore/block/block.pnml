@@ -1,0 +1,131 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// red
+if(use_tvm) {
+	replace(5130, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_NE()
+		semaphore_signal_NE()
+	}
+} else {
+	replace(5130, "./src/semaphore/block/R.png") {
+		semaphore_signal_NE()
+	}
+	// green
+	replace(5131, "./src/semaphore/block/G.png") {
+		semaphore_signal_NE()
+	}
+}
+
+if(use_tvm) {
+	replace(5132, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_SW()
+		semaphore_signal_SW()
+	}
+} else {
+	// red
+	replace(5132, "./src/semaphore/block/R.png") {
+		semaphore_signal_SW()
+	}
+	// green
+	replace(5133, "./src/semaphore/block/G.png") {
+		semaphore_signal_SW()
+	}
+}
+
+if(use_tvm) {
+	replace(5134, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_SE()
+		semaphore_signal_SE()
+	}
+} else {
+	// red
+	replace(5134, "./src/semaphore/block/R.png") {
+		semaphore_signal_SE()
+	}
+	// green
+	replace(5135, "./src/semaphore/block/G.png") {
+		semaphore_signal_SE()
+	}
+}
+
+if(use_tvm) {
+	replace(5136, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_NW()
+		semaphore_signal_NW()
+	}
+} else {
+	// red
+	replace(5136, "./src/semaphore/block/R.png") {
+		semaphore_signal_NW()
+	}
+	// green
+	replace(5137, "./src/semaphore/block/G.png") {
+		semaphore_signal_NW()
+	}
+}
+
+if(use_tvm) {
+	replace(5138, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_W()
+		semaphore_signal_W()
+	}
+} else {
+	// red
+	replace(5138, "./src/semaphore/block/R.png") {
+		semaphore_signal_W()
+	}
+	// green
+	replace(5139, "./src/semaphore/block/G.png") {
+		semaphore_signal_W()
+	}
+}
+
+if(use_tvm) {
+	replace(5140, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_E()
+		semaphore_signal_E()
+	}
+} else {
+	// red
+	replace(5140, "./src/semaphore/block/R.png") {
+		semaphore_signal_E()
+	}
+	// green
+	replace(5141, "./src/semaphore/block/G.png") {
+		semaphore_signal_E()
+	}
+}
+
+if(use_tvm) {
+	replace(5142, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_N()
+		semaphore_signal_N()
+	}
+} else {
+	// red
+	replace(5142, "./src/semaphore/block/R.png") {
+		semaphore_signal_N()
+	}
+	// green
+	replace(5143, "./src/semaphore/block/G.png") {
+		semaphore_signal_N()
+	}
+}
+if(use_tvm) {
+	replace(5144, "./src/semaphore/block/TVM.png") {
+		semaphore_signal_S()
+		semaphore_signal_S()
+	}
+
+} else {
+	// red
+	replace(5144, "./src/semaphore/block/R.png") {
+		semaphore_signal_S()
+	}
+	// green
+	replace(5145, "./src/semaphore/block/G.png") {
+		semaphore_signal_S()
+	}}

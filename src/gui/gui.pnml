@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Signal build button
+replace(1291, "./src/gui/gui.png") {
+	[0, 0, 19, 17, -4, 0]
+}
+// Mouse cursors
+replace(1292, "./src/gui/gui.png") {
+	[20, 0, 28, 30, 0, 0]
+}
+replace(1293, "./src/gui/gui.png") {
+	[50, 0, 28, 30, 0, 0]
+}
+// Signal change button
+replace(5031, "./src/gui/gui.png") {
+	[80, 0, 20, 20, 0, 0]
+}
