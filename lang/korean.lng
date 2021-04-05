@@ -3,7 +3,7 @@
 # GRF name and description
 STR_GRF_NAME_WITH_VER                            :한국 신호기 세트 {VERSION}
 STR_GRF_DESC                                     :한국식 신호기를 추가해주는 신호기 세트입니다.{}(업데이트: {RECENT_UPDATED}){}{SILVER}+ 제작: TELK, EightOnEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
-STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignals
+STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignalSet
 
 
 # Parameters
