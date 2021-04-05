@@ -15,3 +15,6 @@ output = output + entrance.output
 
 import exit
 output = output + exit.output
+
+import combo
+output = output + combo.output
