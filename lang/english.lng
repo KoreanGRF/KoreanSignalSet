@@ -2,7 +2,7 @@
 
 # GRF name and description
 STR_GRF_NAME_WITH_VER                            :Korean Signal Set {VERSION}
-STR_GRF_DESC                                     :A signals set for Korean signals.{}(Updated: {RECENT_UPDATED}){}{SILVER}+ Author: TELK, EightOnEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
+STR_GRF_DESC                                     :A signals set for Korean signals.{}(Updated: {RECENT_UPDATED}){}{SILVER}+ Author: TELK, EightonEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
 STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignalSet
 
 
