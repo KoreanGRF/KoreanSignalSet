@@ -20,21 +20,21 @@ if(is_realistic) {
 if(use_caution_signal) {
     if(is_realistic) {
         if(use_blue) {
-            replace({num2}, "./src/{gfx_code}/YB.real.png") {
+            replace({num2}, "./src/{gfx_code}/Y.real.png") {
                 {template_name}()
             }
         } else {
-            replace({num2}, "./src/{gfx_code}/YG.real.png") {
+            replace({num2}, "./src/{gfx_code}/Y.real.png") {
                 {template_name}()
             }
         }
     } else {
         if(use_blue) {
-            replace({num2}, "./src/{gfx_code}/YB.nonreal.png") {
+            replace({num2}, "./src/{gfx_code}/Y.nonreal.png") {
                 {template_name}()
             }
         } else {
-            replace({num2}, "./src/{gfx_code}/YG.nonreal.png") {
+            replace({num2}, "./src/{gfx_code}/Y.nonreal.png") {
                 {template_name}()
             }
         }
