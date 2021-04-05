@@ -12,3 +12,6 @@ output = output + block.output
 
 import entrance
 output = output + entrance.output
+
+import exit
+output = output + exit.output
