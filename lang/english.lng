@@ -12,7 +12,7 @@ STR_PARAM_IS_REALISTIC_DESC                      :If enabled, use real life grap
 STR_PARAM_USE_TVM_NAME                           :Change semaphore block signal to TVM block sign
 STR_PARAM_USE_TVM_DESC                           :Change semaphore block signal to TVM block sign which is used for high speed rails, which is the same graphics for red and green state. (default: enabled)
 STR_PARAM_USE_CAUTION_SIGNALS_NAME               :Use caution signals
-STR_PARAM_USE_CAUTION_SIGNALS_DESC               :Use caution signals(Yellow, Yellow+Green) for electric exit, combo signals. (default: enabled)
+STR_PARAM_USE_CAUTION_SIGNALS_DESC               :Use deceleration(YG) and caution(Y) signals for electric combo, exit signals respectively. (default: enabled)
 STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_NAME            :Use blue signal for block signal
 STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_DESC            :If enabled, use blue signal for block signal instead of green. (default: disabled)
 STR_PARAM_USE_BLUE_AS_OPEN_ENTRANCE_NAME         :Use blue signal for entrance signal
