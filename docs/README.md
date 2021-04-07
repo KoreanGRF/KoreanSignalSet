@@ -22,7 +22,7 @@ And if you want to translate [the download page of my own site](https://telk.kr/
 
 ## Links
 - [TELKLAND](http://telk.kr)
-- Official Download Page ([Korean](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=kr) / [English](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=en) / [Japanese](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=jp) / [Spanish](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=es))
+- Official Download Page ([Korean](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=kr) / [English](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=en))
 
 ## Contributors
 All names of contributors can be found at [contributors.md](https://github.com/KoreanGRF/KoreanSignalSet/blob/master/docs/contributors.md)
