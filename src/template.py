@@ -19,7 +19,7 @@ if(is_realistic) {
 // green
 if(use_caution_signal) {
     if(is_realistic) {
-        if(use_blue) {
+        if({use_blue}) {
             replace({num2}, "./src/{gfx_code}/{open_state_blue}.real.png") {
                 {template_name}()
             }
@@ -29,7 +29,7 @@ if(use_caution_signal) {
             }
         }
     } else {
-        if(use_blue) {
+        if({use_blue}) {
             replace({num2}, "./src/{gfx_code}/{open_state_blue}.nonreal.png") {
                 {template_name}()
             }
@@ -41,7 +41,7 @@ if(use_caution_signal) {
     }
 } else {
     if(is_realistic) {
-        if(use_blue) {
+        if({use_blue}) {
             replace({num2}, "./src/{gfx_code}/B.real.png") {
                 {template_name}()
             }
@@ -51,7 +51,7 @@ if(use_caution_signal) {
             }
         }
     } else {
-        if(use_blue) {
+        if({use_blue}) {
             replace({num2}, "./src/{gfx_code}/B.nonreal.png") {
                 {template_name}()
             }
@@ -76,17 +76,20 @@ replace({num2}, "./src/{gfx_code}/G.png") {
 }
 """
 
-def signal_direction(tmpl, gfx_code, template_name, num1, num2, open_state='G'):
+def signal_direction(tmpl, gfx_code_full, template_name, num1, num2, open_state='G'):
     open_state_blue  = open_state.replace('G', 'B')
     open_state_green = open_state.replace('B', 'G')
 
+    gfx_code = str(gfx_code_full).split('/')[1]
+
     output = str(tmpl)
+    output = output.replace('{use_blue}', str('use_blue_' + gfx_code))
     output = output.replace('{num1}', str(num1))
     output = output.replace('{num2}', str(num2))
-    output = output.replace('{gfx_code}', gfx_code)
-    output = output.replace('{template_name}', template_name)
-    output = output.replace('{open_state_green}', open_state_green)
-    output = output.replace('{open_state_blue}', open_state_blue)
+    output = output.replace('{gfx_code}', str(gfx_code_full))
+    output = output.replace('{template_name}', str(template_name))
+    output = output.replace('{open_state_green}', str(open_state_green))
+    output = output.replace('{open_state_blue}', str(open_state_blue))
     return output
 
 def replace_electric_signal(gfx_code, start_num, open_state='G'):

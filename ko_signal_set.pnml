@@ -22,15 +22,6 @@ grf {
             def_value: 1;
         }
         
-        // Use blue as open signal
-        use_blue {
-            type: bool;
-            name: string(STR_PARAM_USE_BLUE_AS_OPEN_NAME);
-            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_DESC);
-            bit: 1;
-            def_value: 0;
-        }
-        
         // Use TVM
         use_tvm {
             type: bool;
@@ -47,6 +38,72 @@ grf {
             desc: string(STR_PARAM_USE_CAUTION_SIGNALS_DESC);
             bit: 3;
             def_value: 1;
+        }
+    }
+
+    // Use blue signal as open state
+    param 2 {
+        // for Block signal
+        use_blue_block {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_DESC);
+            bit: 0;
+            def_value: 0;
+        }
+
+        // for Entrance signal
+        use_blue_entrance {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_ENTRANCE_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_ENTRANCE_DESC);
+            bit: 1;
+            def_value: 0;
+        }
+
+        // for Exit signal
+        use_blue_exit {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_EXIT_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_EXIT_DESC);
+            bit: 2;
+            def_value: 0;
+        }
+
+        // for Combo signal
+        use_blue_combo {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_COMBO_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_COMBO_DESC);
+            bit: 3;
+            def_value: 0;
+        }
+        
+        // for path signal
+        use_blue_path {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_PATH_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_PATH_DESC);
+            bit: 4;
+            def_value: 0;
+        }
+        
+        // for Oneway path signal
+        use_blue_oneway_path {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_DESC);
+            bit: 5;
+            def_value: 0;
+        }
+        
+        // for programmable signal
+        use_blue_programmable {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_DESC);
+            bit: 6;
+            def_value: 0;
         }
     }
 }
