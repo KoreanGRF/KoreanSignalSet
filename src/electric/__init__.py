@@ -26,17 +26,17 @@ print("Electric, combo")
 output = output + replace_electric_signal('combo', 5114, 'YG')
 output = output + replace_electric_signal('combo', 6310, 'YG')   # Restricted signal (with blue pole)
 
-# Electric, path
-print("Electric, path")
-output = output + replace_electric_signal('path', 5210)
-output = output + replace_electric_signal('path', 5226)   # Seems like dummy, (with purple pole)
-output = output + replace_electric_signal('path', 6389)   # Restricted signal (with blue pole)
-
 # Electric, oneway path
 print("Electric, oneway path")
-output = output + replace_electric_signal('oneway_path', 5194)
-output = output + replace_electric_signal('oneway_path', 5242)   # Seems like dummy (with purple pole)
-output = output + replace_electric_signal('oneway_path', 6405)   # Restricted signal (with blue pole)
+output = output + replace_electric_signal('oneway_path', 5210)
+output = output + replace_electric_signal('oneway_path', 5226)   # Seems like dummy, (with purple pole)
+output = output + replace_electric_signal('oneway_path', 6389)   # Restricted signal (with blue pole)
+
+# Electric, path
+print("Electric, path")
+output = output + replace_electric_signal('path', 5194)
+output = output + replace_electric_signal('path', 5242)   # Seems like dummy (with purple pole)
+output = output + replace_electric_signal('path', 6405)   # Restricted signal (with blue pole)
 
 # Electric, programmable
 print("Electric, programmable")
