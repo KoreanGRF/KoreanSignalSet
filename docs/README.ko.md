@@ -22,7 +22,7 @@ Pull Request를 열 줄 모르신다면, Issues에 올리셔도 괜찮습니다.
 
 ## 링크
 - [TELKLAND](http://telk.kr)
-- 공식 다운로드 페이지 ([Korean](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=kr) / [English](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=en)
+- 공식 다운로드 페이지 ([Korean](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=kr) / [English](https://telk.kr/ottd/newgrf/ko_signal_set/?lang=en))
 
 ## 기여하신 분들
 모든 기여하신 분들의 이름은 [contributors.md](https://github.com/KoreanGRF/KoreanSignalSet/blob/master/docs/contributors.md)에서 볼 수 있습니다.
