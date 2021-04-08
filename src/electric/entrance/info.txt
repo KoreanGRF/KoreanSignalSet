@@ -1,5 +1,0 @@
-dummy:
-  * YB.real
-  * YG.real
-  * YB.nonreal
-  * YG.nonreal
