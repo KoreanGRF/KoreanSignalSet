@@ -9,22 +9,22 @@ output = ""
 # Electric, block
 print("Electric, block")
 output = output + replace_electric_signal('block', 1275)
-output = output + replace_electric_signal('block', 6262)   # Restricted signal (with blue pole)
+output = output + replace_electric_signal('block', 6261)   # Restricted signal (with blue pole)
 
 # Electric, entrance
 print("Electric, entrance")
 output = output + replace_electric_signal('entrance', 5082)
-output = output + replace_electric_signal('entrance', 6278)   # Restricted signal (with blue pole)
+output = output + replace_electric_signal('entrance', 6277)   # Restricted signal (with blue pole)
 
 # Electric, exit
 print("Electric, exit")
 output = output + replace_electric_signal('exit', 5098, 'Y')
-output = output + replace_electric_signal('exit', 6294, 'Y')   # Restricted signal (with blue pole)
+output = output + replace_electric_signal('exit', 6293, 'Y')   # Restricted signal (with blue pole)
 
 # Electric, combo
 print("Electric, combo")
 output = output + replace_electric_signal('combo', 5114, 'YG')
-output = output + replace_electric_signal('combo', 6310, 'YG')   # Restricted signal (with blue pole)
+output = output + replace_electric_signal('combo', 6309, 'YG')   # Restricted signal (with blue pole)
 
 # Electric, oneway path
 print("Electric, oneway path")
