@@ -1,6 +1,6 @@
 # Required program
 SHELL               := /bin/bash
-NMLC                ?= nmlc
+NMLC                ?= ./NML/nmlc
 PYTHON              ?= python3
 
 # C compiler
