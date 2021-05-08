@@ -74,12 +74,6 @@ clean::
 	@echo "[CLEAN NML]"
 	@-rm -rf $(NML_FILE)
 
-replace_blocks:
-	$(PYTHON) -B ./src/generate.py
-clean::
-	@echo "[CLEAN replace_block]"
-	@-rm -rf ./generated/replace_block.pnml
-
 # Generate custom_tags.txt
 $(TAG_GENERATE): generated
 	@echo "[TAG] $@"
@@ -92,7 +86,7 @@ clean::
 	@-rm -rf $(TAG_FILE)
 
 # Generate *.grf
-$(GRF_GENERATE): generated replace_blocks $(NML_GENERATE) $(TAG_GENERATE)
+$(GRF_GENERATE): generated $(NML_GENERATE) $(TAG_GENERATE)
 	@echo "[NMLC] $@"
 	@ $(NMLC) -c --custom-tags="./generated/$(TAG_FILE)" --lang-dir="./lang/" "./generated/$(NML_FILE)" --grf="./generated/$(GRF_FILE)"
 clean::

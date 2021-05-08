@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Templates for semaphore signals
+template semaphore_signal_NE(file) {
+    [0,   0,   13,  28,   -7,   -25, file]
+}
+template semaphore_signal_SW(file) {
+    [15,  0,   12,  28,   -3,   -25, file]
+}
+template semaphore_signal_SE(file) {
+    [30,  0,   13,  28,   -4,   -25, file]
+}
+template semaphore_signal_NW(file) {
+    [45,  0,   12,  28,   -7,   -24, file]
+}
+template semaphore_signal_W(file) {
+    [60,   0,   5,  28,   -1,   -25, file]
+}
+template semaphore_signal_E(file) {
+    [75,   0,   5,  28,   -2,   -25, file]
+}
+template semaphore_signal_N(file) {
+    [90,   0,  14,  28,   -8,   -25, file]
+}
+template semaphore_signal_S(file) {
+    [105,  0,  14,  28,   -4,   -25, file]
+}
+
+// Template for semaphore signals
+template semaphore_signals(file_red, file_green) {
+    semaphore_signal_NE(file_red)
+    semaphore_signal_NE(file_green)
+    semaphore_signal_SW(file_red)
+    semaphore_signal_SW(file_green)
+    semaphore_signal_SE(file_red)
+    semaphore_signal_SE(file_green)
+    semaphore_signal_NW(file_red)
+    semaphore_signal_NW(file_green)
+    semaphore_signal_W(file_red)
+    semaphore_signal_W(file_green)
+    semaphore_signal_E(file_red)
+    semaphore_signal_E(file_green)
+    semaphore_signal_N(file_red)
+    semaphore_signal_N(file_green)
+    semaphore_signal_S(file_red)
+    semaphore_signal_S(file_green)
+}
+
+// Semaphore
+replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 48) {
+    // Block
+    semaphore_signals("./src/semaphore/block/R.png", "./src/semaphore/block/G.png")
+
+    // Entry
+    semaphore_signals("./src/semaphore/entry/R.png", "./src/semaphore/entry/G.png")
+
+    // Exit
+    semaphore_signals("./src/semaphore/exit/R.png", "./src/semaphore/exit/G.png")
+
+    // Combo
+    semaphore_signals("./src/semaphore/combo/R.png", "./src/semaphore/combo/G.png")
+}
+
+// Semaphore PBS
+replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 176) {
+    // PBS
+    semaphore_signals("./src/semaphore/path/R.png", "./src/semaphore/path/G.png")
+
+    // PBS oneway
+    semaphore_signals("./src/semaphore/oneway_path/R.png", "./src/semaphore/oneway_path/G.png")
+
+    // PBS unused
+    semaphore_signals("./src/semaphore/path/R.png", "./src/semaphore/path/G.png")
+    semaphore_signals("./src/semaphore/oneway_path/R.png", "./src/semaphore/oneway_path/G.png")
+}
+
+// TVM
+if(use_tvm) {
+    replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 48) {
+        // Just replace block signal only
+        semaphore_signals("./src/semaphore/block/TVM.png", "./src/semaphore/block/TVM.png")
+    }
+}

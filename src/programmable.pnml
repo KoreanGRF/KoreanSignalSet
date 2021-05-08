@@ -1,0 +1,40 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Semaphore programmable (offset 0)
+replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 0) { 
+	semaphore_signals("./src/semaphore/programmable/R.png", "./src/semaphore/programmable/G.png")
+}
+
+// Electric programmable (offset 16)
+if(use_caution_signal) {
+    if(is_realistic) {
+        if(use_blue_programmable) {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.real.png", "./src/electric/programmable/B.real.png") }
+        } else {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.real.png", "./src/electric/programmable/G.real.png") }
+        }
+    } else {
+        if(use_blue_programmable) {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.nonreal.png", "./src/electric/programmable/B.nonreal.png") }
+        } else {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.nonreal.png", "./src/electric/programmable/G.nonreal.png") }
+        }
+    }
+} else {
+    if(is_realistic) {
+        if(use_blue_programmable) {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.real.png", "./src/electric/programmable/B.real.png") }
+        } else {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.real.png", "./src/electric/programmable/G.real.png") }
+        }
+    } else {
+        if(use_blue_programmable) {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.nonreal.png", "./src/electric/programmable/B.nonreal.png") }
+        } else {
+            replacenew(PROGRAMMABLE_PRE_SIGNAL, "", 16) { electric_signals("./src/electric/programmable/R.nonreal.png", "./src/electric/programmable/G.nonreal.png") }
+        }
+    }
+}
