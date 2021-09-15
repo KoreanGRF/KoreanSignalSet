@@ -30,6 +30,27 @@ template electric_signal_S(file) {
 }
 
 // Template for electric signals
+template electric_signals(file) {
+    electric_signal_NE(file)
+    electric_signal_SW(file)
+    electric_signal_SE(file)
+    electric_signal_NW(file)
+    electric_signal_W(file)
+    electric_signal_E(file)
+    electric_signal_N(file)
+    electric_signal_S(file)
+}
+
+#include "./electric/block/code.pnml"
+#include "./electric/entry/code.pnml"
+#include "./electric/exit/code.pnml"
+#include "./electric/combo/code.pnml"
+#include "./electric/path/code.pnml"
+#include "./electric/oneway_path/code.pnml"
+#include "./electric/programmable/code.pnml"
+
+/*
+// Template for electric signals
 template electric_signals(file_red, file_green) {
     electric_signal_NE(file_red)
     electric_signal_NE(file_green)
@@ -234,3 +255,4 @@ if(use_caution_signal) {
         }
     }
 }
+*/

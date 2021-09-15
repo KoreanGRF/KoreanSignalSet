@@ -9,7 +9,7 @@ grf {
     name :                             string(STR_GRF_NAME_WITH_VER);
     desc :                             string(STR_GRF_DESC);
     url :                              string(STR_GRF_URL);
-    version :                          4;
+    version :                          5;
     min_compatible_version :           1;
     
     param 1 {
@@ -108,6 +108,11 @@ grf {
     }
 }
 
+
+if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
+	error(FATAL, string(STR_UNSUPPORTED_VERSION));
+}
+
 // GUI
 #include "./src/gui/gui.pnml"
 
@@ -121,4 +126,27 @@ grf {
 #include "./src/electric.pnml"
 
 // Programmable signals
-#include "./src/programmable.pnml"
+// #include "./src/programmable.pnml"
+
+switch(FEAT_SIGNALS, SELF, sw_signal_types, (extra_callback_info2 & 0x00FFFF00) >> 8) {
+      0x0: sw_signal_block;        // Block
+    0x100: sw_signal_entry;        // Entry
+    0x200: sw_signal_exit;         // Exit
+    0x300: sw_signal_combo;        // Combo
+    0x400: sw_signal_path;         // Path
+    0x500: sw_signal_oneway_path;  // Oneway path
+    0x600: sw_signal_programmable; // Programmable
+    CB_FAILED;
+}
+
+item(FEAT_SIGNALS, ko_signal_set, 0) {
+    property {
+        enable_restricted_signals: 1;
+        enable_signal_recolour: 1;
+        extra_aspects: 3;
+    }
+
+    graphics {
+        sw_signal_types;
+    }
+}

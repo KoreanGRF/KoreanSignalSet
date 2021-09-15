@@ -1,0 +1,51 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Programmable
+spriteset(set_signal_programmable_B_real)     { electric_signals("./src/electric/programmable/B.real.png") }
+spriteset(set_signal_programmable_B_nonreal)  { electric_signals("./src/electric/programmable/B.nonreal.png") }
+spriteset(set_signal_programmable_G_real)     { electric_signals("./src/electric/programmable/G.real.png") }
+spriteset(set_signal_programmable_G_nonreal)  { electric_signals("./src/electric/programmable/G.nonreal.png") }
+spriteset(set_signal_programmable_R_real)     { electric_signals("./src/electric/programmable/R.real.png") }
+spriteset(set_signal_programmable_R_nonreal)  { electric_signals("./src/electric/programmable/R.nonreal.png") }
+spriteset(set_signal_programmable_Y_real)     { electric_signals("./src/electric/programmable/Y.real.png") }
+spriteset(set_signal_programmable_Y_nonreal)  { electric_signals("./src/electric/programmable/Y.nonreal.png") }
+spriteset(set_signal_programmable_YB_real)    { electric_signals("./src/electric/programmable/YB.real.png") }
+spriteset(set_signal_programmable_YB_nonreal) { electric_signals("./src/electric/programmable/YB.nonreal.png") }
+spriteset(set_signal_programmable_YG_real)    { electric_signals("./src/electric/programmable/YG.real.png") }
+spriteset(set_signal_programmable_YG_nonreal) { electric_signals("./src/electric/programmable/YG.nonreal.png") }
+
+switch(FEAT_SIGNALS, SELF, sw_signal_programmable_R, (is_realistic << 1) + (use_blue_programmable << 0)) {
+    1: set_signal_programmable_R_nonreal; // non realistic && blue
+    2: set_signal_programmable_R_real;    // realistic     && green
+    3: set_signal_programmable_R_real;    // realistic     && blue
+    set_signal_programmable_R_nonreal;    // non realistic && green
+}
+switch(FEAT_SIGNALS, SELF, sw_signal_programmable_G, (is_realistic << 1) + (use_blue_programmable << 0)) {
+    1: set_signal_programmable_B_nonreal; // non realistic && blue
+    2: set_signal_programmable_G_real;    // realistic     && green
+    3: set_signal_programmable_B_real;    // realistic     && blue
+    set_signal_programmable_G_nonreal;    // non realistic && green
+}
+switch(FEAT_SIGNALS, SELF, sw_signal_programmable_Y, (is_realistic << 1) + (use_blue_programmable << 0)) {
+    1: set_signal_programmable_Y_nonreal; // non realistic && blue
+    2: set_signal_programmable_Y_real;    // realistic     && green
+    3: set_signal_programmable_Y_real;    // realistic     && blue
+    set_signal_programmable_Y_nonreal;    // non realistic && green
+}
+switch(FEAT_SIGNALS, SELF, sw_signal_programmable_YG, (is_realistic << 1) + (use_blue_programmable << 0)) {
+    1: set_signal_programmable_YB_nonreal; // non realistic && blue
+    2: set_signal_programmable_YG_real;    // realistic     && green
+    3: set_signal_programmable_YB_real;    // realistic     && blue
+    set_signal_programmable_YG_nonreal;    // non realistic && green
+}
+
+switch(FEAT_SIGNALS, SELF, sw_signal_programmable, extra_callback_info2 & 0x000000FF) {
+    0: sw_signal_programmable_R;
+    1: sw_signal_programmable_G;
+    2: sw_signal_programmable_Y;
+    3: sw_signal_programmable_YG;
+    4: sw_signal_programmable_G;
+}
