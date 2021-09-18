@@ -49,6 +49,7 @@ template electric_signals(file) {
 #include "./electric/path/code.pnml"
 #include "./electric/oneway_path/code.pnml"
 #include "./electric/programmable/code.pnml"
+#include "./electric/noentry/code.pnml"
 
 
 

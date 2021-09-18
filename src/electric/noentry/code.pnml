@@ -1,0 +1,13 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Path
+spriteset(set_signal_noentry_real)     { electric_signals("./src/electric/noentry/N.nonreal.png") }   // We don't have real graphic yet
+spriteset(set_signal_noentry_nonreal)  { electric_signals("./src/electric/noentry/N.nonreal.png") }
+
+switch(FEAT_SIGNALS, SELF, sw_signal_noentry, is_realistic) {
+    1: set_signal_noentry_real;    // realistic
+    set_signal_noentry_nonreal;    // non realistic
+}
