@@ -110,7 +110,7 @@ grf {
 
 // Notice
 if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
-	error(FATAL, string(STR_UNSUPPORTED_VERSION));
+	error(NOTICE, string(STR_UNSUPPORTED_VERSION));
 }
 
 // GUI

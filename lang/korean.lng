@@ -29,4 +29,4 @@ STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_NAME     :프로그램 신호기에 청�
 STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_DESC     :이 설정을 켜면, 단방향 경로 신호기에 녹색 신호 대신 청색 신호를 사용합니다.{}{ORANGE}JGRPP에서만 적용됩니다{BLACK} (기본값: 끔)
 
 # Errors
-STR_UNSUPPORTED_VERSION                          :이 NewGRF는 OpenTTD JGRPP 0.43.0 또는 그 이상의 버전이 필요합니다. 안정화 버전에서는 한국 신호기 세트 1.1.0 버전을 사용하세요.
+STR_UNSUPPORTED_VERSION                          :이 NewGRF의 모든 기능(eg. 다현시 신호)을 사용하려면 OpenTTD JGRPP 0.43.0 또는 그 이상의 버전이 필요합니다.
