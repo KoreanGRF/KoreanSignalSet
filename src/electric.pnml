@@ -29,7 +29,7 @@ template electric_signal_S(file) {
     [105, 0,   4,   26,   -1,   -24, file]
 }
 
-// Template for electric signals
+// Template for electric signals for JGRPP
 template electric_signals(file) {
     electric_signal_NE(file)
     electric_signal_SW(file)
@@ -41,6 +41,7 @@ template electric_signals(file) {
     electric_signal_S(file)
 }
 
+// Switches for each signals for JGRPP
 #include "./electric/block/code.pnml"
 #include "./electric/entry/code.pnml"
 #include "./electric/exit/code.pnml"
@@ -49,9 +50,10 @@ template electric_signals(file) {
 #include "./electric/oneway_path/code.pnml"
 #include "./electric/programmable/code.pnml"
 
-/*
-// Template for electric signals
-template electric_signals(file_red, file_green) {
+
+
+// Template for electric signals for Stable
+template electric_signals_for_stable(file_red, file_green) {
     electric_signal_NE(file_red)
     electric_signal_NE(file_green)
     electric_signal_SW(file_red)
