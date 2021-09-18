@@ -78,9 +78,16 @@ replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 176) {
 }
 
 // TVM
-if(use_tvm) {
-    replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 48) {
-        // Just replace block signal only
-        semaphore_signals("./src/semaphore/block/TVM.png", "./src/semaphore/block/TVM.png")
+if (use_tvm) {
+    if (traffic_side == TRAFFIC_SIDE_RIGHT) {
+        replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 48) {
+            // Just replace block signal only
+            semaphore_signals("./src/semaphore/block/TVM.png", "./src/semaphore/block/TVM.png")
+        }
+    } else {
+        replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 48) {
+            // Just replace block signal only
+            semaphore_signals("./src/semaphore/block/TVM_left.png", "./src/semaphore/block/TVM_left.png")
+        }
     }
 }
