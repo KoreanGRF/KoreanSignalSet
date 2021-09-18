@@ -27,3 +27,6 @@ STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_NAME      :Use blue signal for oneway pat
 STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_DESC      :If enabled, use blue signal for oneway path signal instead of green. (default: disabled)
 STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_NAME     :Use blue signal for programmable signal
 STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_DESC     :If enabled, use blue signal for programmable signal instead of green.{}{ORANGE}It only affects in JGRPP{BLACK} (default: disabled)
+
+# Errors
+STR_UNSUPPORTED_VERSION                          :This NewGRF requires OpenTTD JGRPP 0.43.0 or higher to experience full features like multi-aspect signals.

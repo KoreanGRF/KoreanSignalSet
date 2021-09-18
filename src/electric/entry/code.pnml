@@ -1,0 +1,51 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Entry
+spriteset(set_signal_entry_B_real)     { electric_signals("./src/electric/entry/B.real.png") }
+spriteset(set_signal_entry_B_nonreal)  { electric_signals("./src/electric/entry/B.nonreal.png") }
+spriteset(set_signal_entry_G_real)     { electric_signals("./src/electric/entry/G.real.png") }
+spriteset(set_signal_entry_G_nonreal)  { electric_signals("./src/electric/entry/G.nonreal.png") }
+spriteset(set_signal_entry_R_real)     { electric_signals("./src/electric/entry/R.real.png") }
+spriteset(set_signal_entry_R_nonreal)  { electric_signals("./src/electric/entry/R.nonreal.png") }
+spriteset(set_signal_entry_Y_real)     { electric_signals("./src/electric/entry/Y.real.png") }
+spriteset(set_signal_entry_Y_nonreal)  { electric_signals("./src/electric/entry/Y.nonreal.png") }
+spriteset(set_signal_entry_YB_real)    { electric_signals("./src/electric/entry/YB.real.png") }
+spriteset(set_signal_entry_YB_nonreal) { electric_signals("./src/electric/entry/YB.nonreal.png") }
+spriteset(set_signal_entry_YG_real)    { electric_signals("./src/electric/entry/YG.real.png") }
+spriteset(set_signal_entry_YG_nonreal) { electric_signals("./src/electric/entry/YG.nonreal.png") }
+
+switch(FEAT_SIGNALS, SELF, sw_signal_entry_R, (is_realistic << 1) + (use_blue_entry << 0)) {
+    1: set_signal_entry_R_nonreal; // non realistic && blue
+    2: set_signal_entry_R_real;    // realistic     && green
+    3: set_signal_entry_R_real;    // realistic     && blue
+    set_signal_entry_R_nonreal;    // non realistic && green
+}
+switch(FEAT_SIGNALS, SELF, sw_signal_entry_G, (is_realistic << 1) + (use_blue_entry << 0)) {
+    1: set_signal_entry_B_nonreal; // non realistic && blue
+    2: set_signal_entry_G_real;    // realistic     && green
+    3: set_signal_entry_B_real;    // realistic     && blue
+    set_signal_entry_G_nonreal;    // non realistic && green
+}
+switch(FEAT_SIGNALS, SELF, sw_signal_entry_Y, (is_realistic << 1) + (use_blue_entry << 0)) {
+    1: set_signal_entry_Y_nonreal; // non realistic && blue
+    2: set_signal_entry_Y_real;    // realistic     && green
+    3: set_signal_entry_Y_real;    // realistic     && blue
+    set_signal_entry_Y_nonreal;    // non realistic && green
+}
+switch(FEAT_SIGNALS, SELF, sw_signal_entry_YG, (is_realistic << 1) + (use_blue_entry << 0)) {
+    1: set_signal_entry_YB_nonreal; // non realistic && blue
+    2: set_signal_entry_YG_real;    // realistic     && green
+    3: set_signal_entry_YB_real;    // realistic     && blue
+    set_signal_entry_YG_nonreal;    // non realistic && green
+}
+
+switch(FEAT_SIGNALS, SELF, sw_signal_entry, extra_callback_info2 & 0x000000FF) {
+    0: sw_signal_entry_R;
+    1: sw_signal_entry_G;
+    2: sw_signal_entry_Y;
+    3: sw_signal_entry_YG;
+    4: sw_signal_entry_G;
+}
