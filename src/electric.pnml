@@ -76,29 +76,29 @@ template electric_signals_for_stable(file_red, file_green) {
 if(use_caution_signal) {
     if(is_realistic) {
         if(use_blue_block) {
-            replace(1275, "") { electric_signals("./src/electric/block/R.real.png", "./src/electric/block/B.real.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.real.png", "./src/electric/block/B.real.png") }
         } else {
-            replace(1275, "") { electric_signals("./src/electric/block/R.real.png", "./src/electric/block/G.real.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.real.png", "./src/electric/block/G.real.png") }
         }
     } else {
         if(use_blue_block) {
-            replace(1275, "") { electric_signals("./src/electric/block/R.nonreal.png", "./src/electric/block/B.nonreal.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.nonreal.png", "./src/electric/block/B.nonreal.png") }
         } else {
-            replace(1275, "") { electric_signals("./src/electric/block/R.nonreal.png", "./src/electric/block/G.nonreal.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.nonreal.png", "./src/electric/block/G.nonreal.png") }
         }
     }
 } else {
     if(is_realistic) {
         if(use_blue_block) {
-            replace(1275, "") { electric_signals("./src/electric/block/R.real.png", "./src/electric/block/B.real.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.real.png", "./src/electric/block/B.real.png") }
         } else {
-            replace(1275, "") { electric_signals("./src/electric/block/R.real.png", "./src/electric/block/G.real.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.real.png", "./src/electric/block/G.real.png") }
         }
     } else {
         if(use_blue_block) {
-            replace(1275, "") { electric_signals("./src/electric/block/R.nonreal.png", "./src/electric/block/B.nonreal.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.nonreal.png", "./src/electric/block/B.nonreal.png") }
         } else {
-            replace(1275, "") { electric_signals("./src/electric/block/R.nonreal.png", "./src/electric/block/G.nonreal.png") }
+            replace(1275, "") { electric_signals_for_stable("./src/electric/block/R.nonreal.png", "./src/electric/block/G.nonreal.png") }
         }
     }
 }
@@ -107,29 +107,29 @@ if(use_caution_signal) {
 if(use_caution_signal) {
     if(is_realistic) {
         if(use_blue_entry) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.real.png", "./src/electric/entry/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.real.png", "./src/electric/entry/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.real.png", "./src/electric/entry/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.real.png", "./src/electric/entry/G.real.png") }
         }
     } else {
         if(use_blue_entry) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.nonreal.png", "./src/electric/entry/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.nonreal.png", "./src/electric/entry/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.nonreal.png", "./src/electric/entry/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.nonreal.png", "./src/electric/entry/G.nonreal.png") }
         }
     }
 } else {
     if(is_realistic) {
         if(use_blue_entry) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.real.png", "./src/electric/entry/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.real.png", "./src/electric/entry/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.real.png", "./src/electric/entry/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.real.png", "./src/electric/entry/G.real.png") }
         }
     } else {
         if(use_blue_entry) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.nonreal.png", "./src/electric/entry/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.nonreal.png", "./src/electric/entry/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals("./src/electric/entry/R.nonreal.png", "./src/electric/entry/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 0) { electric_signals_for_stable("./src/electric/entry/R.nonreal.png", "./src/electric/entry/G.nonreal.png") }
         }
     }
 }
@@ -138,29 +138,29 @@ if(use_caution_signal) {
 if(use_caution_signal) {
     if(is_realistic) {
         if(use_blue_exit) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.real.png", "./src/electric/exit/Y.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.real.png", "./src/electric/exit/Y.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.real.png", "./src/electric/exit/Y.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.real.png", "./src/electric/exit/Y.real.png") }
         }
     } else {
         if(use_blue_exit) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.nonreal.png", "./src/electric/exit/Y.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.nonreal.png", "./src/electric/exit/Y.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.nonreal.png", "./src/electric/exit/Y.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.nonreal.png", "./src/electric/exit/Y.nonreal.png") }
         }
     }
 } else {
     if(is_realistic) {
         if(use_blue_exit) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.real.png", "./src/electric/exit/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.real.png", "./src/electric/exit/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.real.png", "./src/electric/exit/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.real.png", "./src/electric/exit/G.real.png") }
         }
     } else {
         if(use_blue_exit) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.nonreal.png", "./src/electric/exit/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.nonreal.png", "./src/electric/exit/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals("./src/electric/exit/R.nonreal.png", "./src/electric/exit/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 16) { electric_signals_for_stable("./src/electric/exit/R.nonreal.png", "./src/electric/exit/G.nonreal.png") }
         }
     }
 }
@@ -169,29 +169,29 @@ if(use_caution_signal) {
 if(use_caution_signal) {
     if(is_realistic) {
         if(use_blue_combo) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.real.png", "./src/electric/combo/YB.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.real.png", "./src/electric/combo/YB.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.real.png", "./src/electric/combo/YG.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.real.png", "./src/electric/combo/YG.real.png") }
         }
     } else {
         if(use_blue_combo) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.nonreal.png", "./src/electric/combo/YB.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.nonreal.png", "./src/electric/combo/YB.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.nonreal.png", "./src/electric/combo/YG.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.nonreal.png", "./src/electric/combo/YG.nonreal.png") }
         }
     }
 } else {
     if(is_realistic) {
         if(use_blue_combo) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.real.png", "./src/electric/combo/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.real.png", "./src/electric/combo/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.real.png", "./src/electric/combo/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.real.png", "./src/electric/combo/G.real.png") }
         }
     } else {
         if(use_blue_combo) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.nonreal.png", "./src/electric/combo/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.nonreal.png", "./src/electric/combo/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals("./src/electric/combo/R.nonreal.png", "./src/electric/combo/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 32) { electric_signals_for_stable("./src/electric/combo/R.nonreal.png", "./src/electric/combo/G.nonreal.png") }
         }
     }
 }
@@ -200,29 +200,29 @@ if(use_caution_signal) {
 if(use_caution_signal) {
     if(is_realistic) {
         if(use_blue_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.real.png", "./src/electric/path/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.real.png", "./src/electric/path/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.real.png", "./src/electric/path/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.real.png", "./src/electric/path/G.real.png") }
         }
     } else {
         if(use_blue_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.nonreal.png", "./src/electric/path/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.nonreal.png", "./src/electric/path/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.nonreal.png", "./src/electric/path/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.nonreal.png", "./src/electric/path/G.nonreal.png") }
         }
     }
 } else {
     if(is_realistic) {
         if(use_blue_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.real.png", "./src/electric/path/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.real.png", "./src/electric/path/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.real.png", "./src/electric/path/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.real.png", "./src/electric/path/G.real.png") }
         }
     } else {
         if(use_blue_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.nonreal.png", "./src/electric/path/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.nonreal.png", "./src/electric/path/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals("./src/electric/path/R.nonreal.png", "./src/electric/path/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 112) { electric_signals_for_stable("./src/electric/path/R.nonreal.png", "./src/electric/path/G.nonreal.png") }
         }
     }
 }
@@ -231,30 +231,29 @@ if(use_caution_signal) {
 if(use_caution_signal) {
     if(is_realistic) {
         if(use_blue_oneway_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/G.real.png") }
         }
     } else {
         if(use_blue_oneway_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/G.nonreal.png") }
         }
     }
 } else {
     if(is_realistic) {
         if(use_blue_oneway_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/B.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/B.real.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/G.real.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.real.png", "./src/electric/oneway_path/G.real.png") }
         }
     } else {
         if(use_blue_oneway_path) {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/B.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/B.nonreal.png") }
         } else {
-            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/G.nonreal.png") }
+            replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 128) { electric_signals_for_stable("./src/electric/oneway_path/R.nonreal.png", "./src/electric/oneway_path/G.nonreal.png") }
         }
     }
 }
-*/
