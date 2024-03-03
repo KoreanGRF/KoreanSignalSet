@@ -39,6 +39,15 @@ grf {
             bit: 3;
             def_value: 1;
         }
+
+        // Use caution signals(Y and YG) together
+        use_routing_restriction {
+            type: bool;
+            name: string(STR_PARAM_USE_ROUTING_RESTRICTION_NAME);
+            desc: string(STR_PARAM_USE_ROUTING_RESTRICTION_DESC);
+            bit: 4;
+            def_value: 1;
+        }
     }
 
     // Use blue signal as open state
@@ -140,9 +149,21 @@ if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
 // Electric signals
 #include "./src/electric.pnml"
 
+param[10] = reserve_sprites(1);
+replace (param[10]) {
+    recolour_sprite {
+        0x84: 0xC8;
+        0x85: 0xCA;
+        0x86: 0xCC;
+    }
+}
+
 // General signal switches
-switch(FEAT_SIGNALS, SELF, sw_signal_types, (extra_callback_info2 & 0x00FFFF00) >> 8) {
-      0x0: sw_signal_block;        // Block
+switch (FEAT_SIGNALS, SELF, sw_signal_types, [
+    STORE_TEMP(param[10] + (hasbit(extra_callback_info2, 24) ? 0 : 1), 0x100),
+    ((extra_callback_info2 & 0x00FFFF00) >> 8)
+]) {
+    0x000: sw_signal_block;        // Block
     0x100: sw_signal_entry;        // Entry
     0x200: sw_signal_exit;         // Exit
     0x300: sw_signal_combo;        // Combo
@@ -154,9 +175,9 @@ switch(FEAT_SIGNALS, SELF, sw_signal_types, (extra_callback_info2 & 0x00FFFF00) 
 }
 
 // Item
-item(FEAT_SIGNALS, ko_signal_set, 0) {
+item (FEAT_SIGNALS, ko_signal_set, 0) {
     property {
-        enable_restricted_signals: 1;
+        enable_restricted_signals: use_routing_restriction;
         enable_signal_recolour: 1;
         enable_no_entry_signals: 1;
         extra_aspects: 3;

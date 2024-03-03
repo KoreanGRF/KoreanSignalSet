@@ -13,6 +13,8 @@ STR_PARAM_USE_TVM_NAME                           :Change semaphore block signal 
 STR_PARAM_USE_TVM_DESC                           :Change semaphore block signal to TVM block sign which is used for high speed rails, which is the same graphics for red and green state. (default: enabled)
 STR_PARAM_USE_CAUTION_SIGNALS_NAME               :Use caution signals
 STR_PARAM_USE_CAUTION_SIGNALS_DESC               :Use deceleration(YG) and caution(Y) signals for electric combo, exit signals respectively. (default: enabled)
+STR_PARAM_USE_ROUTING_RESTRICTION_NAME           :Show routing restrictions
+STR_PARAM_USE_ROUTING_RESTRICTION_DESC           :When enabled, signals with routing restriction programs atttached are shown with a blue signal post.
 # STR_PARAM_FORCE_TVM_SIGNAL_SIDE_NAME             :Position of the TVM signal's side
 # STR_PARAM_FORCE_TVM_SIGNAL_SIDE_DESC             :Force TVM signal's position regardless of the driving traffic side. (default: As driving traffic side)
 # STR_PARAM_TVM_SIGNAL_SIDE_TRAFFIC_SIDE           :As driving traffic side
