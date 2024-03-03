@@ -79,6 +79,7 @@ replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 176) {
 
 // TVM
 if (use_tvm) {
+    // if (force_tvm_signal_side == 2 || (force_tvm_signal_side == 0 && traffic_side == TRAFFIC_SIDE_RIGHT)) {
     if (traffic_side == TRAFFIC_SIDE_RIGHT) {
         replacenew(PRE_SIGNAL_SEMAPHORE_PBS, "", 48) {
             // Just replace block signal only

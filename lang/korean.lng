@@ -13,6 +13,11 @@ STR_PARAM_USE_TVM_NAME                           :구식 폐색 신호기를 TVM
 STR_PARAM_USE_TVM_DESC                           :구식 폐색 신호기를 고속철도에서 사용하는 TVM 폐색 표지로 변경합니다. TVM 폐색 표지는 진행/정지 신호가 구분되지 않습니다. (기본값: 켬)
 STR_PARAM_USE_CAUTION_SIGNALS_NAME               :주의 신호 사용
 STR_PARAM_USE_CAUTION_SIGNALS_DESC               :전자식 복합, 출구 신호기의 진행 신호를 각각 감속(YG), 주의(Y) 신호로 변경합니다. (기본값: 켬)
+# STR_PARAM_FORCE_TVM_SIGNAL_SIDE_NAME             :TVM 신호 위치
+# STR_PARAM_FORCE_TVM_SIGNAL_SIDE_DESC             :TVM 신호기의 위치를 통행 방향과 상관없이 강제할 수 있습니다 (기본값: 통행 방향)
+# STR_PARAM_TVM_SIGNAL_SIDE_TRAFFIC_SIDE           :통행 방향
+# STR_PARAM_TVM_SIGNAL_SIDE_LEFT_SIDE              :좌측
+# STR_PARAM_TVM_SIGNAL_SIDE_RIGHT_SIDE             :우측
 STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_NAME            :폐색 신호기에 청색 신호 사용
 STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_DESC            :이 설정을 켜면, 폐색 신호기에 녹색 신호 대신 청색 신호를 사용합니다. (기본값: 끔)
 STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_NAME            :입구 신호기에 청색 신호 사용
