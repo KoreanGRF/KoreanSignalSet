@@ -17,32 +17,32 @@ spriteset(set_signal_block_YB_nonreal) { electric_signals("./src/electric/block/
 spriteset(set_signal_block_YG_real)    { electric_signals("./src/electric/block/YG.real.png") }
 spriteset(set_signal_block_YG_nonreal) { electric_signals("./src/electric/block/YG.nonreal.png") }
 
-switch(FEAT_SIGNALS, SELF, sw_signal_block_R, (is_realistic << 1) + (use_blue_block << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_block_R, (is_realistic << 1) + (use_blue_block << 0)) {
     1: set_signal_block_R_nonreal; // non realistic && blue
     2: set_signal_block_R_real;    // realistic     && green
     3: set_signal_block_R_real;    // realistic     && blue
     set_signal_block_R_nonreal;    // non realistic && green
 }
-switch(FEAT_SIGNALS, SELF, sw_signal_block_G, (is_realistic << 1) + (use_blue_block << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_block_G, (is_realistic << 1) + (use_blue_block << 0)) {
     1: set_signal_block_B_nonreal; // non realistic && blue
     2: set_signal_block_G_real;    // realistic     && green
     3: set_signal_block_B_real;    // realistic     && blue
     set_signal_block_G_nonreal;    // non realistic && green
 }
-switch(FEAT_SIGNALS, SELF, sw_signal_block_Y, (is_realistic << 1) + (use_blue_block << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_block_Y, (is_realistic << 1) + (use_blue_block << 0)) {
     1: set_signal_block_Y_nonreal; // non realistic && blue
     2: set_signal_block_Y_real;    // realistic     && green
     3: set_signal_block_Y_real;    // realistic     && blue
     set_signal_block_Y_nonreal;    // non realistic && green
 }
-switch(FEAT_SIGNALS, SELF, sw_signal_block_YG, (is_realistic << 1) + (use_blue_block << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_block_YG, (is_realistic << 1) + (use_blue_block << 0)) {
     1: set_signal_block_YB_nonreal; // non realistic && blue
     2: set_signal_block_YG_real;    // realistic     && green
     3: set_signal_block_YB_real;    // realistic     && blue
     set_signal_block_YG_nonreal;    // non realistic && green
 }
 
-switch(FEAT_SIGNALS, SELF, sw_signal_block, extra_callback_info2 & 0x000000FF) {
+switch (FEAT_SIGNALS, SELF, sw_signal_block, extra_callback_info2 & 0x000000FF) {
     0: sw_signal_block_R;
     1: sw_signal_block_G;
     2: sw_signal_block_Y;
