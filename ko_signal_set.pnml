@@ -149,6 +149,9 @@ if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
 // Electric signals
 #include "./src/electric.pnml"
 
+// Shunt
+#include "./src/shunt.pnml"
+
 param[10] = reserve_sprites(1);
 replace (param[10]) {
     // No recolouring
@@ -168,8 +171,15 @@ replace (param[10]) {
 
 // General signal switches
 switch (FEAT_SIGNALS, SELF, sw_signal_types, [
+    // Recolouring by parameter
     STORE_TEMP(param[10] + (hasbit(extra_callback_info2, 24) ? 1 : 0), 0x100),
-    ((extra_callback_info2 & 0x00FFFF00) | signal_style)
+
+    // Assign signal type
+    (
+          (extra_callback_info2 & 0x0000FF00)    // 00: electric, 01: semaphore
+        | (extra_callback_info2 & 0x00FF0000)   // from 00, block, entry, exit, combo, path, oneway path, programmable, no-entry signals
+        | signal_style
+    )
 ]) {
     // Signals
     0x00000: sw_signal_block;        // Block
@@ -180,17 +190,16 @@ switch (FEAT_SIGNALS, SELF, sw_signal_types, [
     0x50000: sw_signal_oneway_path;  // Oneway path
     0x60000: sw_signal_programmable; // Programmable
     0x70000: sw_signal_noentry;      // No-entry
-/*
+
     // (Reserved) Shunt
-    0x00001: sw_shunt_block;        // Block
-    0x10001: sw_shunt_entry;        // Entry
-    0x20001: sw_shunt_exit;         // Exit
-    0x30001: sw_shunt_combo;        // Combo
-    0x40001: sw_shunt_path;         // Path
-    0x50001: sw_shunt_oneway_path;  // Oneway path
-    0x60001: sw_shunt_programmable; // Programmable
-    0x70001: sw_shunt_noentry;      // No-entry
-*/
+    0x40001: sw_shunt_single;        // Path
+    0x70001: sw_shunt_single;        // No-entry
+    0x40101: sw_shunt_multiple;      // Path, semaphore
+    0x70101: sw_shunt_multiple;      // No-entry, semaphore
+
+    0x40102: sw_shunt_position;      // Path, semaphore
+    0x70102: sw_shunt_position;      // No-entry, semaphore
+
     CB_FAILED;
 }
 
@@ -206,5 +215,26 @@ item (FEAT_SIGNALS, ko_signal_set, 0) {
 
     graphics {
         sw_signal_types;
+    }
+}
+
+// Additional signals
+item (FEAT_SIGNALS, custom_signals, 0) {
+    property {
+        define_style: 1;
+        style_name: string(STR_STYLE_SHUNT_COLOUR);
+        style_electric_enabled: bitmask(SIGNAL_TYPE_PBS, SIGNAL_TYPE_NO_ENTRY);
+        style_semaphore_enabled: bitmask(SIGNAL_TYPE_PBS, SIGNAL_TYPE_NO_ENTRY);
+        style_no_aspect_increase: 1;
+        style_always_reserve_through: 1;
+        style_lookahead_single_signal_only: 1;
+
+        define_style: 2;
+        style_name: string(STR_STYLE_SHUNT_POSITION);
+        style_electric_enabled: 0;
+        style_semaphore_enabled: bitmask(SIGNAL_TYPE_PBS, SIGNAL_TYPE_NO_ENTRY);
+        style_no_aspect_increase: 1;
+        style_always_reserve_through: 1;
+        style_lookahead_single_signal_only: 1;
     }
 }

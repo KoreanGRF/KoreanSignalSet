@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Templates for shunt signal
+template shunt_signal(file, x, y) {
+    [x+0,   y+0,   6,   9,   -3,   -7, file]
+    [x+15,  y+0,   6,   9,   -1,   -7, file]
+    [x+30,  y+0,   6,   9,   -3,   -7, file]
+    [x+45,  y+0,   6,   9,   -1,   -6, file]
+    [x+60,  y+0,   7,   9,   -1,   -7, file]
+    [x+75,  y+0,   7,   9,   -4,   -7, file]
+    [x+90,  y+0,   4,   9,   -1,   -7, file]
+    [x+105, y+0,   4,   9,   -1,   -7, file]
+}
+
+spriteset(set_shunt_multiple_off) { shunt_signal("./src/shunt/shunt.colour_multiple.png", 0, 0) }
+spriteset(set_shunt_multiple_on)  { shunt_signal("./src/shunt/shunt.colour_multiple.png", 0, 15) }
+spriteset(set_shunt_single_off)   { shunt_signal("./src/shunt/shunt.colour_single.png", 0, 0) }
+spriteset(set_shunt_single_on)    { shunt_signal("./src/shunt/shunt.colour_single.png", 0, 15) }
+spriteset(set_shunt_position_off) { shunt_signal("./src/shunt/shunt.position.png", 0, 0) }
+spriteset(set_shunt_position_on)  { shunt_signal("./src/shunt/shunt.position.png", 0, 15) }
+
+switch(FEAT_SIGNALS, SELF, sw_shunt_multiple, extra_callback_info2 & 0x000000FF) {
+    0: set_shunt_multiple_off;
+    set_shunt_multiple_on;
+}
+switch(FEAT_SIGNALS, SELF, sw_shunt_single, extra_callback_info2 & 0x000000FF) {
+    0: set_shunt_single_off;
+    set_shunt_single_on;
+}
+switch(FEAT_SIGNALS, SELF, sw_shunt_position, extra_callback_info2 & 0x000000FF) {
+    0: set_shunt_position_off;
+    set_shunt_position_on;
+}
