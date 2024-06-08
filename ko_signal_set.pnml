@@ -200,6 +200,7 @@ item (FEAT_SIGNALS, ko_signal_set, 0) {
         enable_restricted_signals: use_routing_restriction;
         enable_signal_recolour: 1;
         enable_no_entry_signals: 1;
+        enable_programmable_pre_signals: 1;
         extra_aspects: 3;
     }
 
