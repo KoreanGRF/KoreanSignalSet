@@ -40,7 +40,7 @@ grf {
             def_value: 1;
         }
 
-        // Use caution signals(Y and YG) together
+        // Recolouring signals as blue poles if they have a route restriction program
         use_routing_restriction {
             type: bool;
             name: string(STR_PARAM_USE_ROUTING_RESTRICTION_NAME);
@@ -151,6 +151,14 @@ if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
 
 param[10] = reserve_sprites(1);
 replace (param[10]) {
+    // No recolouring
+    recolour_sprite {
+        0x84: 0x84;
+        0x85: 0x85;
+        0x86: 0x86;
+    }
+
+    // Recolouring for blue poles
     recolour_sprite {
         0x84: 0xC8;
         0x85: 0xCA;
@@ -160,17 +168,29 @@ replace (param[10]) {
 
 // General signal switches
 switch (FEAT_SIGNALS, SELF, sw_signal_types, [
-    STORE_TEMP(param[10] + (hasbit(extra_callback_info2, 24) ? 0 : 1), 0x100),
-    ((extra_callback_info2 & 0x00FFFF00) >> 8)
+    STORE_TEMP(param[10] + (hasbit(extra_callback_info2, 24) ? 1 : 0), 0x100),
+    ((extra_callback_info2 & 0x00FFFF00) | signal_style)
 ]) {
-    0x000: sw_signal_block;        // Block
-    0x100: sw_signal_entry;        // Entry
-    0x200: sw_signal_exit;         // Exit
-    0x300: sw_signal_combo;        // Combo
-    0x400: sw_signal_path;         // Path
-    0x500: sw_signal_oneway_path;  // Oneway path
-    0x600: sw_signal_programmable; // Programmable
-    0x700: sw_signal_noentry;      // No-entry
+    // Signals
+    0x00000: sw_signal_block;        // Block
+    0x10000: sw_signal_entry;        // Entry
+    0x20000: sw_signal_exit;         // Exit
+    0x30000: sw_signal_combo;        // Combo
+    0x40000: sw_signal_path;         // Path
+    0x50000: sw_signal_oneway_path;  // Oneway path
+    0x60000: sw_signal_programmable; // Programmable
+    0x70000: sw_signal_noentry;      // No-entry
+/*
+    // (Reserved) Shunt
+    0x00001: sw_shunt_block;        // Block
+    0x10001: sw_shunt_entry;        // Entry
+    0x20001: sw_shunt_exit;         // Exit
+    0x30001: sw_shunt_combo;        // Combo
+    0x40001: sw_shunt_path;         // Path
+    0x50001: sw_shunt_oneway_path;  // Oneway path
+    0x60001: sw_shunt_programmable; // Programmable
+    0x70001: sw_shunt_noentry;      // No-entry
+*/
     CB_FAILED;
 }
 

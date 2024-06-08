@@ -19,38 +19,38 @@ spriteset(set_signal_oneway_path_YG_nonreal) { electric_signals("./src/electric/
 spriteset(set_signal_oneway_path_YY_real)    { electric_signals("./src/electric/oneway_path/YY.real.png") }
 spriteset(set_signal_oneway_path_YY_nonreal) { electric_signals("./src/electric/oneway_path/YY.nonreal.png") }
 
-switch(FEAT_SIGNALS, SELF, sw_signal_oneway_path_R, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_oneway_path_R, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
     1: set_signal_oneway_path_R_nonreal; // non realistic && blue
     2: set_signal_oneway_path_R_real;    // realistic     && green
     3: set_signal_oneway_path_R_real;    // realistic     && blue
     set_signal_oneway_path_R_nonreal;    // non realistic && green
 }
-switch(FEAT_SIGNALS, SELF, sw_signal_oneway_path_G, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_oneway_path_G, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
     1: set_signal_oneway_path_B_nonreal; // non realistic && blue
     2: set_signal_oneway_path_G_real;    // realistic     && green
     3: set_signal_oneway_path_B_real;    // realistic     && blue
     set_signal_oneway_path_G_nonreal;    // non realistic && green
 }
-switch(FEAT_SIGNALS, SELF, sw_signal_oneway_path_Y, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_oneway_path_Y, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
     1: set_signal_oneway_path_Y_nonreal; // non realistic && blue
     2: set_signal_oneway_path_Y_real;    // realistic     && green
     3: set_signal_oneway_path_Y_real;    // realistic     && blue
     set_signal_oneway_path_Y_nonreal;    // non realistic && green
 }
-switch(FEAT_SIGNALS, SELF, sw_signal_oneway_path_YY, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_oneway_path_YY, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
     1: set_signal_oneway_path_YY_nonreal; // non realistic && blue
     2: set_signal_oneway_path_YY_real;    // realistic     && green
     3: set_signal_oneway_path_YY_real;    // realistic     && blue
     set_signal_oneway_path_YY_nonreal;    // non realistic && green
 }
-switch(FEAT_SIGNALS, SELF, sw_signal_oneway_path_YG, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
+switch (FEAT_SIGNALS, SELF, sw_signal_oneway_path_YG, (is_realistic << 1) + (use_blue_oneway_path << 0)) {
     1: set_signal_oneway_path_YB_nonreal; // non realistic && blue
     2: set_signal_oneway_path_YG_real;    // realistic     && green
     3: set_signal_oneway_path_YB_real;    // realistic     && blue
     set_signal_oneway_path_YG_nonreal;    // non realistic && green
 }
 
-switch(FEAT_SIGNALS, SELF, sw_signal_oneway_path, extra_callback_info2 & 0x000000FF) {
+switch (FEAT_SIGNALS, SELF, sw_signal_oneway_path, extra_callback_info2 & 0x000000FF) {
     0: sw_signal_oneway_path_R;
     1: sw_signal_oneway_path_G;
     2: sw_signal_oneway_path_YY;
