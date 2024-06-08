@@ -1,6 +1,6 @@
 # Required program
 SHELL               := /bin/bash
-NMLC                ?= ./NML/nmlc
+NMLC                ?= /mnt/d/Dev/OpenTTD/NewGRFDev/NML/jgr-nml/nmlc
 PYTHON              ?= python3
 
 # C compiler
