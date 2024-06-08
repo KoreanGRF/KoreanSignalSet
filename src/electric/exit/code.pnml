@@ -42,10 +42,21 @@ switch (FEAT_SIGNALS, SELF, sw_signal_exit_YG, (is_realistic << 1) + (use_blue_e
     set_signal_exit_YG_nonreal;    // non realistic && green
 }
 
-switch (FEAT_SIGNALS, SELF, sw_signal_exit, extra_callback_info2 & 0x000000FF) {
+switch (FEAT_SIGNALS, SELF, sw_signal_exit_normal, (extra_callback_info2 & 0x000000FF)) {
     0: sw_signal_exit_R;
     1: sw_signal_exit_G;
     2: sw_signal_exit_Y;
     3: sw_signal_exit_YG;
     4: sw_signal_exit_G;
+}
+switch (FEAT_SIGNALS, SELF, sw_signal_exit_caution, (extra_callback_info2 & 0x000000FF)) {
+    0: sw_signal_exit_R;
+    1: sw_signal_exit_G;
+    2: sw_signal_exit_Y;
+    3: sw_signal_exit_Y;
+    4: sw_signal_exit_Y;
+}
+switch (FEAT_SIGNALS, SELF, sw_signal_exit, use_caution_signal) {
+    0: sw_signal_exit_normal;
+    1: sw_signal_exit_caution;
 }

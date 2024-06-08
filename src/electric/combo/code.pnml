@@ -42,10 +42,21 @@ switch (FEAT_SIGNALS, SELF, sw_signal_combo_YG, (is_realistic << 1) + (use_blue_
     set_signal_combo_YG_nonreal;    // non realistic && green
 }
 
-switch (FEAT_SIGNALS, SELF, sw_signal_combo, extra_callback_info2 & 0x000000FF) {
+switch (FEAT_SIGNALS, SELF, sw_signal_combo_normal, (extra_callback_info2 & 0x000000FF)) {
     0: sw_signal_combo_R;
     1: sw_signal_combo_G;
     2: sw_signal_combo_Y;
     3: sw_signal_combo_YG;
     4: sw_signal_combo_G;
+}
+switch (FEAT_SIGNALS, SELF, sw_signal_combo_caution, (extra_callback_info2 & 0x000000FF)) {
+    0: sw_signal_combo_R;
+    1: sw_signal_combo_G;
+    2: sw_signal_combo_Y;
+    3: sw_signal_combo_YG;
+    4: sw_signal_combo_YG;
+}
+switch (FEAT_SIGNALS, SELF, sw_signal_combo, use_caution_signal) {
+    0: sw_signal_combo_normal;
+    1: sw_signal_combo_caution;
 }
