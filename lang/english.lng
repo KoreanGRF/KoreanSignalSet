@@ -15,6 +15,12 @@ STR_PARAM_USE_CAUTION_SIGNALS_NAME               :Use caution signals
 STR_PARAM_USE_CAUTION_SIGNALS_DESC               :Use deceleration(YG) and caution(Y) signals for electric combo, exit signals respectively. (default: enabled)
 STR_PARAM_USE_ROUTING_RESTRICTION_NAME           :Show routing restrictions
 STR_PARAM_USE_ROUTING_RESTRICTION_DESC           :When enabled, signals with routing restriction programs atttached are shown with a blue signal post.
+STR_PARAM_ASPECT_STYLE_NAME                      :Signal aspect sequence
+STR_PARAM_ASPECT_STYLE_DESC                      :This sets the aspect sequence style. (Default: 5 Aspect)
+STR_ASPECT_STYLE_2                               :None, 2 Aspect (R -> G)
+STR_ASPECT_STYLE_3                               :3 Aspect (R -> Y -> G)
+STR_ASPECT_STYLE_4                               :4 Aspect (R -> Y -> YG -> G)
+STR_ASPECT_STYLE_5                               :5 Aspect (R -> YY -> Y -> YG -> G)
 # STR_PARAM_FORCE_TVM_SIGNAL_SIDE_NAME             :Position of the TVM signal's side
 # STR_PARAM_FORCE_TVM_SIGNAL_SIDE_DESC             :Force TVM signal's position regardless of the driving traffic side. (default: As driving traffic side)
 # STR_PARAM_TVM_SIGNAL_SIDE_TRAFFIC_SIDE           :As driving traffic side

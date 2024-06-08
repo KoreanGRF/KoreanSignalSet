@@ -9,7 +9,7 @@ grf {
     name :                             string(STR_GRF_NAME_WITH_VER);
     desc :                             string(STR_GRF_DESC);
     url :                              string(STR_GRF_URL);
-    version :                          1210;
+    version :                          1290;
     min_compatible_version :           1;
 
     param 1 {
@@ -115,6 +115,24 @@ grf {
             def_value: 0;
         }
     }
+
+    // Signal aspects
+    param 3 {
+        param_aspect_style {
+            type: int;
+            name: string(STR_PARAM_ASPECT_STYLE_NAME);
+            desc: string(STR_PARAM_ASPECT_STYLE_DESC);
+            min_value: 0;
+            max_value: 3;
+            def_value: 3;
+            names: {
+                0: string(STR_ASPECT_STYLE_2);
+                1: string(STR_ASPECT_STYLE_3);
+                2: string(STR_ASPECT_STYLE_4);
+                3: string(STR_ASPECT_STYLE_5);
+            };
+        }
+    }
 /*
     // Force TVM signal side
     param 3 {
@@ -210,7 +228,7 @@ item (FEAT_SIGNALS, ko_signal_set, 0) {
         enable_signal_recolour: 1;
         enable_no_entry_signals: 1;
         enable_programmable_pre_signals: 1;
-        extra_aspects: 3;
+        extra_aspects: param_aspect_style;
     }
 
     graphics {

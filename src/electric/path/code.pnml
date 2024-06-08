@@ -50,10 +50,32 @@ switch (FEAT_SIGNALS, SELF, sw_signal_path_YG, (is_realistic << 1) + (use_blue_p
     set_signal_path_YG_nonreal;    // non realistic && green
 }
 
-switch (FEAT_SIGNALS, SELF, sw_signal_path, extra_callback_info2 & 0x000000FF) {
+switch (FEAT_SIGNALS, SELF, sw_signal_path_aspect_5, extra_callback_info2 & 0x000000FF) {
     0: sw_signal_path_R;
-    1: sw_signal_path_G;
     2: sw_signal_path_YY;
     3: sw_signal_path_Y;
     4: sw_signal_path_YG;
+    sw_signal_path_G;
+}
+switch (FEAT_SIGNALS, SELF, sw_signal_path_aspect_4, extra_callback_info2 & 0x000000FF) {
+    0: sw_signal_path_R;
+    2: sw_signal_path_Y;
+    3: sw_signal_path_YG;
+    sw_signal_path_G;
+}
+switch (FEAT_SIGNALS, SELF, sw_signal_path_aspect_3, extra_callback_info2 & 0x000000FF) {
+    0: sw_signal_path_R;
+    2: sw_signal_path_Y;
+    sw_signal_path_G;
+}
+switch (FEAT_SIGNALS, SELF, sw_signal_path_aspect_2, extra_callback_info2 & 0x000000FF) {
+    0: sw_signal_path_R;
+    sw_signal_path_G;
+}
+
+switch (FEAT_SIGNALS, SELF, sw_signal_path, param_aspect_style) {
+    3: sw_signal_path_aspect_5;
+    2: sw_signal_path_aspect_4;
+    1: sw_signal_path_aspect_3;
+    sw_signal_path_aspect_2;
 }

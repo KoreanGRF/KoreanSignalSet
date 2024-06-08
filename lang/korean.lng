@@ -15,6 +15,12 @@ STR_PARAM_USE_CAUTION_SIGNALS_NAME               :주의 신호 사용
 STR_PARAM_USE_CAUTION_SIGNALS_DESC               :전자식 복합, 출구 신호기의 진행 신호를 각각 감속(YG), 주의(Y) 신호로 변경합니다. (기본값: 켬)
 STR_PARAM_USE_ROUTING_RESTRICTION_NAME           :경로 제한 표시
 STR_PARAM_USE_ROUTING_RESTRICTION_DESC           :이 설정을 켜면, 경로 제한 프로그램이 있는 신호기의 기둥을 파란색으로 표시합니다.
+STR_PARAM_ASPECT_STYLE_NAME                      :신호 현시 수
+STR_PARAM_ASPECT_STYLE_DESC                      :신호기의 현시 수를 조정합니다. (기본값: 5현시)
+STR_ASPECT_STYLE_2                               :사용 안 함, 2현시 (R → G)
+STR_ASPECT_STYLE_3                               :3현시 (R → Y → G)
+STR_ASPECT_STYLE_4                               :4현시 (R → Y → YG → G)
+STR_ASPECT_STYLE_5                               :5현시 (R → YY → Y → YG → G)
 # STR_PARAM_FORCE_TVM_SIGNAL_SIDE_NAME             :TVM 신호 위치
 # STR_PARAM_FORCE_TVM_SIGNAL_SIDE_DESC             :TVM 신호기의 위치를 통행 방향과 상관없이 강제할 수 있습니다 (기본값: 통행 방향)
 # STR_PARAM_TVM_SIGNAL_SIDE_TRAFFIC_SIDE           :통행 방향
