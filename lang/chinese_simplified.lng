@@ -1,0 +1,51 @@
+##grflangid 0x56
+
+# GRF 名称与描述
+STR_GRF_NAME_WITH_VER                            :韩国信号包 {VERSION}
+STR_GRF_DESC                                     :添加韩国信号机的信号包。{}（更新日期：{RECENT_UPDATED}）{}{SILVER}+ 制作：TELK, EightonEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
+STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignalSet
+
+
+# 参数
+STR_PARAM_IS_REALISTIC_NAME                      :现实风格图形
+STR_PARAM_IS_REALISTIC_DESC                      :开启后，信号机将以现实世界的外观显示，而非游戏化样式。（默认：开）
+STR_PARAM_USE_TVM_NAME                           :将旧式闭塞信号改为 TVM 闭塞标志
+STR_PARAM_USE_TVM_DESC                           :将旧式闭塞信号替换为高速铁路使用的 TVM 闭塞标志。TVM 标志不区分“通行/停止”信号。（默认：开）
+STR_PARAM_USE_CAUTION_SIGNALS_NAME               :启用注意信号
+STR_PARAM_USE_CAUTION_SIGNALS_DESC               :将电子式复合信号机与出口信号机的“通行”信号细分为减速（YG）与注意（Y）信号。（默认：开）
+STR_PARAM_USE_ROUTING_RESTRICTION_NAME           :路径限制标识
+STR_PARAM_USE_ROUTING_RESTRICTION_DESC           :开启后，带有路径限制程序的信号机立柱将显示为蓝色。
+STR_PARAM_ASPECT_STYLE_NAME                      :信号显示数
+STR_PARAM_ASPECT_STYLE_DESC                      :调整信号机的显示数量。（默认：5显示）
+STR_ASPECT_STYLE_2                               :禁用，2显示（红 → 绿）
+STR_ASPECT_STYLE_3                               :3显示（红 → 黄 → 绿）
+STR_ASPECT_STYLE_4                               :4显示（红 → 黄 → 黄绿 → 绿）
+STR_ASPECT_STYLE_5                               :5显示（红 → 双黄 → 黄 → 黄绿 → 绿）
+# STR_PARAM_FORCE_TVM_SIGNAL_SIDE_NAME             :TVM 信号位置
+# STR_PARAM_FORCE_TVM_SIGNAL_SIDE_DESC             :可强制 TVM 信号机位置与行车方向无关。（默认：按行车方向）
+# STR_PARAM_TVM_SIGNAL_SIDE_TRAFFIC_SIDE           :行车方向
+# STR_PARAM_TVM_SIGNAL_SIDE_LEFT_SIDE              :左侧
+# STR_PARAM_TVM_SIGNAL_SIDE_RIGHT_SIDE             :右侧
+STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_NAME            :在闭塞信号中使用蓝色信号
+STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_DESC            :开启后，闭塞信号将以蓝色代替绿色显示。（默认：关）
+STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_NAME            :在入口信号中使用蓝色信号
+STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_DESC            :开启后，入口信号将以蓝色代替绿色显示。（默认：关）
+STR_PARAM_USE_BLUE_AS_OPEN_EXIT_NAME             :在出口信号中使用蓝色信号
+STR_PARAM_USE_BLUE_AS_OPEN_EXIT_DESC             :开启后，出口信号将以蓝色代替绿色显示。（默认：关）
+STR_PARAM_USE_BLUE_AS_OPEN_COMBO_NAME            :在复合信号中使用蓝色信号
+STR_PARAM_USE_BLUE_AS_OPEN_COMBO_DESC            :开启后，复合信号将以蓝色代替绿色显示。（默认：关）
+STR_PARAM_USE_BLUE_AS_OPEN_PATH_NAME             :在路径信号中使用蓝色信号
+STR_PARAM_USE_BLUE_AS_OPEN_PATH_DESC             :开启后，路径信号将以蓝色代替绿色显示。（默认：关）
+STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_NAME      :在单向路径信号中使用蓝色信号
+STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_DESC      :开启后，单向路径信号将以蓝色代替绿色显示。（默认：关）
+STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_NAME     :在可编程信号中使用蓝色信号
+STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_DESC     :开启后，可编程信号将以蓝色代替绿色显示。{}{ORANGE}仅在 JGRPP 中生效{}{BLACK}（默认：关）
+
+
+# 入换信号（调车用）
+STR_STYLE_SHUNT_COLOUR                           :入换信号（色灯式）
+STR_STYLE_SHUNT_POSITION                         :入换信号（灯列式）
+
+
+# 错误提示
+STR_UNSUPPORTED_VERSION                          :要启用此 NewGRF 的所有功能（例如多显示信号），需要 OpenTTD JGRPP 0.43.0 或更高版本。
